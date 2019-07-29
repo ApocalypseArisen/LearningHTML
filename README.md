@@ -11,4 +11,5 @@ Some simple sities created with the help of SoloLearn
 * head/body - both necessary to create a basic site
 * title section - name of the page
 * p section - basic paragraph
+* < br /> - line break
 
