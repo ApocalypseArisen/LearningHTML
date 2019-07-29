@@ -1,5 +1,5 @@
 # LearningHTML
-Some simple sities created with help of SoloLearn
+Some simple sities created with the help of SoloLearn
 # HTML # - HyperText Markup Language
 
 # Basic info:
