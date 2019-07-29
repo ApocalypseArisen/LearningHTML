@@ -13,3 +13,7 @@ Some simple sities created with the help of SoloLearn
 * p section - basic paragraph
 * < br /> - line break
 
+#Formatting:
+* just put b (for bold) in section bracekts like with p and others
+* examples in textformating.html
+
