@@ -16,4 +16,5 @@ Some simple sities created with the help of SoloLearn
 #Formatting:
 * just put b (for bold) in section bracekts like with p and others
 * examples in textformating.html
+* headings are added by mext h(number) sections
 
