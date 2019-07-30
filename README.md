@@ -17,4 +17,6 @@ Some simple sities created with the help of SoloLearn
 * just put b (for bold) in section bracekts like with p and others
 * examples in textformating.html
 * headings are added by mext h(number) sections
+* < hr /> - horizontal line
+* comments are added by < !-- something -->
 
