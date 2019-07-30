@@ -21,12 +21,20 @@ Some simple sities created with the help of SoloLearn
 * comments are added by < !-- something -->
 * atributes - arguments added to a tag like < p  align="center"> will center the text.
 It' s not neccesary to add argument to a closing of a tag. Yo can use more than two arguments
+
+#Links
 * you can add hyperlinks by using a tag with href argument
+* adding argument target = "_blank" will force links to open in cart/windows
 
 #Images
 * img are adde by img tab, thier source specified by the src atribute
-* If you want to allign image you need to put img tag in a p tag w ith allign atribute
-* You can add borders with border atribute (1px, 2px, etc)
+* if you want to allign image you need to put img tag in a p tag w ith allign atribute
+* you can add borders with border atribute (1px, 2px, etc)
 * href and a tag work also on iamges!
+
+#Lists
+* lists are created by using ol tag
+* items are listed using a li tag
+* alternativly if you want to have unlisted list use ul tag instead of ol
 
 
