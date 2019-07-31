@@ -21,6 +21,7 @@ Some simple sities created with the help of SoloLearn
 * comments are added by < !-- something -->
 * atributes - arguments added to a tag like < p  align="center"> will center the text.
 It' s not neccesary to add argument to a closing of a tag. Yo can use more than two arguments
+* style arument allows you to chaneg look and feel of almost every object: style="color:yellow;somethingelse;etc"
 
 # Links:
 * you can add hyperlinks by using a tag with href argument
