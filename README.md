@@ -1,5 +1,5 @@
 # LearningHTML/CSS/PHP
-Learning basics of creating websities uding modern solutions with the help of <a href = "https://www.sololearn.com/" target = "_blank">sololearn courses</a>
+Learning basics of creating websities uding modern solutions with the help of <a href = "https://www.sololearn.com/" target = "_blank">SoloLearn courses</a>
  * HTML - HyperText Markup Language
  * CSS -
  * php -
@@ -49,6 +49,19 @@ It' s not neccesary to add argument to a closing of a tag. Yo can use more than 
 * tr tag creates rows and a td tag blaced within tr tag creates columns
 * using colspan argument with td tag allows to spcify how long should siad column be
 * bgcolor argument allows to set color of column or entire row tebendin whether used with tr or td tag
+
+### Forms:
+* Basicly they allow you to collect data fro  user and send them to process somewhere else
+* form tag opens a form section
+* action atribute specifies where to send data (for example to a php script/backend of a website)
+* method specifies how you will send data. Get will display data in the address bar (it's used by default) while post will hide the data (more secure)
+* input tag placed within form tag dictates how user will input data
+* there are two types of checkboxes - radio will allow only one choice while checkbox will allow multilble choices (bot are atributes)
+* name atribute dictates how input field will be named vale on the other hand dictates whta is the value of the input
+* example < input type="radio" name="food" value="placki" />Placki< br />
+* type text and passwprd will accept input from a keyboad
+* example Password: < input type="password" name="password"/>< br />
+* form results are submitted byusing input type submit which creates sumbit button
 
 ### Customizing whole page
 * Using arguments with opening body tag will afect whole page 
