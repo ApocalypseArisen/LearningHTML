@@ -1,5 +1,5 @@
 # LearningHTML/CSS/PHP
-Learning basics of creating websities uding modern solutions with the help <a href = "https://www.sololearn.com/">of sololearn courses</a>
+Learning basics of creating websities uding modern solutions with the help of <a href = "https://www.sololearn.com/" target = "_blank">sololearn courses</a>
  * HTML - HyperText Markup Language
  * CSS -
  * php -
