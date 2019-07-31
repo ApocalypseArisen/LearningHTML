@@ -37,4 +37,12 @@ It' s not neccesary to add argument to a closing of a tag. Yo can use more than 
 * items are listed using a li tag
 * alternativly if you want to have unlisted list use ul tag instead of ol
 
+# Tables
+* tables are created using table tag
+* you can add atributes to by adding them in opening table tag
+* possible atributes are align, border - specifies the size of a table border
+* tr tag creates rows and a td tag blaced within tr tag creates columns
+* using colspan argument with td tag allows to spcify how long should siad column be
+* bgcolor argument allows to set color of column or entire row tebendin whether used with tr or td tag
+
 
