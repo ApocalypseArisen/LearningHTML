@@ -65,6 +65,7 @@ Code above will produce this results:
     <li>First element</li>
     <li>Second element</li>
 </ol>
+
 If you don't wan't to use numerated lists you can change `ol` tag for `ul` tag which will change the list like that:
 <ul>
     <li>First element</li>
