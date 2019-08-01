@@ -75,8 +75,8 @@ If you don't wan't to use numerated lists you can change `ol` tag for `ul` tag w
 ### Tables:
 <table>
         <tr>
-            <td>blue</td>
-            <td>yellow</td>
+            <td bgcolor=blue>blue</td>
+            <td bgcolor=yellow>yellow</td>
         </tr>
 </table>
 Table above was created as example using code bellow. 
