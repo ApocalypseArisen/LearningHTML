@@ -51,6 +51,20 @@ If you want to allign the image you need to put `img` between `<p allign="center
 By putting `img` tag between `<a href = "google.com"></a>` you can make image act like a hyperlink. 
 
 ### Lists:
+You can create lists by using `ol` tag:
+```HTML
+<ol>
+    <li>First element</li>
+    <li>Second element</li>
+</ol>
+```
+As you can see in the example above `ol` opens list while `li` tag creates single elemnt on the list.
+
+Code above will produce this results:
+<ol>
+    <li>First element</li>
+    <li>Second element</li>
+</ol>
 * Lists are created by using ol tag
 * Items are listed using a li tag
 * Alternativly if you want to have unlisted list use ul tag instead of ol
