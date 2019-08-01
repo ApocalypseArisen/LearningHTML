@@ -136,7 +136,7 @@ Better avoid using this unless absolutlly necesarry.
 ### Customizing whole page:
 Using arguments within `body` tag will affect whole page 
 
-For example `<body bgcolor=#002b3c text="white">'
+For example `<body bgcolor=#002b3c text="white">`
 
 `bgcolor` will set background color for the entire page while `text` will set default color of a text within whole body tag.
 
