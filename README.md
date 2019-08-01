@@ -32,6 +32,7 @@ Refer to textformating.html to see examples.
 * `<h1>` to `<h6>` are headings
 * `<hr />` - horizontal line
 * You can add coments by `<!-- something -->`
+
 You can change additional things like color of a aligment of a object by using arguments. Arguments are additional variables added to arguments added to a opening tag like `<p  align="center">`. This one will cause the text between the `<p>` tag be centred on the screen.
 It' s not neccesary to add argument to a closing of a tag. It's also possible to use multible arguments in a single tag.
 
