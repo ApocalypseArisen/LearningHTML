@@ -64,17 +64,16 @@ It' s not neccesary to add argument to a closing of a tag. You can use more than
 * form results are submitted by using input type submit which creates sumbit button
 
 ### Frames:
-* Better not to use now. Removed in HTML5
-* The page could be divided into frames using frameset tag.
-* You could specify number o pixels, scrolling area, ability to resize etc.
-
-Example: 
 ```HTML
-<frameset cols="25%"> 
-    <frame src="a.htm" noresize="noresize" /> 
+<frameset cols="25%,50%"> 
+    <frame src="a.htm" noresize="noresize" />
+    <frame src="b.htm" />
     <noframe> Frames are not supported in your browser </noframe>
 </frameste>
 ```
+Here is a example of a frame. On most modern browsers this will display message contained in noframe tag as frames are no longer supported in *HTML 5*
+It used to allow you to divide page into individual frames which could be customized with diffrent atributes such as scrolling, resizing, borders etc.
+Better avoid using this unless absolutlly necesarry.
 
 ### Customizing whole page
 * Using arguments with opening body tag will afect whole page 
