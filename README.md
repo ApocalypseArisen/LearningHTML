@@ -3,9 +3,9 @@ This document and acompaning html files were created with the help of a [SoloLea
 All documents were created as part of a learning process to master creation of your own custom websities. This documents contains information which I thought were the most usefull to have written down somewhere.
 
 If you are looking to learn html/css/php skills yourself I highly recomend going through sololeaern courses first and look at my html files as reference.
- * [HTML](https://www.sololearn.com/Course/PHP/) - *HyperText Markup Language*
- * [CSS](https://www.sololearn.com/Course/HTML/) - **
- * [PHP](https://www.sololearn.com/Course/CSS/) - **
+ * [HTML](https://www.sololearn.com/Course/PHP/) - **HyperText Markup Language**
+ * [CSS](https://www.sololearn.com/Course/HTML/) - ****
+ * [PHP](https://www.sololearn.com/Course/CSS/) - ****
 
 # HTML section
 
@@ -80,7 +80,7 @@ It' s not neccesary to add argument to a closing of a tag. You can use more than
     <noframe> Frames are not supported in your browser </noframe>
 </frameste>
 ```
-Here is a example of a frame. On most modern browsers this will display message contained in noframe tag as frames are no longer supported in *HTML 5*
+Here is a example of a frame. On most modern browsers this will display message contained in noframe tag as frames are no longer supported in **HTML 5**
 It used to allow you to divide page into individual frames which could be customized with diffrent atributes such as scrolling, resizing, borders etc.
 Better avoid using this unless absolutlly necesarry.
 
