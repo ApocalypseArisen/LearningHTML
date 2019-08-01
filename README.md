@@ -44,6 +44,7 @@ By adding `target="_blank"` argument you will force the link to open in a new ca
 
 ### Images:
 Using `<img src ="image.com"/>` you will add an image to  your html document. `src` argument specifies the origin of a image. It can come from other websities on the internet or come from the path on the computer harddrive. If image lives in the same folder where the html file is located it will be enough to use `src="iamge.jpg"`.
+
 By using additiona tags like `width="328px" height="400px" border="2px"` you can adjust size of the image or add borders. With `border` you can onlu use pixels **px** but `width` and `height` argument you can use **%** to scale the image.
 If you want to allign the image you need to put `img` between `<p allign="center"></p>`.
 By putting `img` tag between `<a href = "google.com"></a>` you can make image act like a hyperlink. 
