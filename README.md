@@ -80,6 +80,7 @@ If you don't wan't to use numerated lists you can change `ol` tag for `ul` tag w
         </tr>
 </table>
 Table above was created as example using code bellow. 
+
 ```HTML
 <table>
         <tr>
