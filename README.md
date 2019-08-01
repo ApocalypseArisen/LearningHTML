@@ -33,14 +33,14 @@ Refer to textformating.html to see examples.
 * `<hr />` - horizontal line
 * You can add coments by `<!-- something -->`
 
-You can change additional things like color of a aligment of a object by using arguments. Arguments are additional variables added to arguments added to a opening tag like `<p  align="center">`. This one will cause the text between the `<p>` tag be centred on the screen.
+You can change additional things like color of a aligment of a object by using arguments. Arguments are additional variables added to arguments added to a opening tag like `<p  align="center">`. This one will cause the text between the `<p>` tag to be centred on the screen.
 It' s not neccesary to add argument to a closing of a tag. It's also possible to use multible arguments in a single tag.
 
 You can also use style argument whiuch allows you to chaneg look and feel of almost every object: `<p style="color:yellow;somethingelse;etc">`
 
 ### Links:
-* You can add hyperlinks by using a tag with href argument
-* Adding argument target = "_blank" will force links to open in cart/windows
+You can create links by using `<a href = "google.com">this text will become a hyperlink</a>`
+By adding `target="_blank"` argument you will force the link to open in a new card or a new page. But be aware this does not always work.
 
 ### Images:
 * Img are adde by img tab, thier source specified by the src atribute
