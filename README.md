@@ -98,17 +98,28 @@ Table above was created as example using code bellow.
 Using `colspan = "2"` determines how wide given column is.
 
 ### Forms:
-* Basicly they allow you to collect data fro  user and send them to process somewhere else
-* form tag opens a form section
-* action atribute specifies where to send data (for example to a php script/backend of a website)
-* method specifies how you will send data. Get will display data in the address bar (it's used by default) while post will hide the data (more secure)
-* input tag placed within form tag dictates how user will input data
-* There are two types of checkboxes - radio will allow only one choice while checkbox will allow multilble choices (bot are atributes)
-* name atribute dictates how input field will be named vale on the other hand dictates whta is the value of the input
-* Example < input type="radio" name="food" value="placki" />Placki< br />
-* type text and password will accept input from a keyboad
-* Example Password: < input type="password" name="password"/>< br />
-* form results are submitted by using input type submit which creates sumbit button
+Forms allow you to collect informations from user. In html section we only handle gathering data but not actually process it.
+
+```HTML
+<form method="POST">
+            <input type="text" name="username"/><br />
+            <input type="password" name="password"/><br />
+            <input type="radio" name="food" value="nalesniki" />Naleśniki<br />
+            <input type="checkbox" name="food" value="placki" />Placki<br />
+            <textarea name"message"></textarea>d
+            <input type="submit" value="Submit" />
+</form>
+```
+`form` tag contains all interactions with the user. `input` tag contains defrent methods user input.
+
+`type` specifies what method of input will be used,
+* `text` accepts plain text
+* `password` also accepts text but it hides input and is more secure to use with passwords
+* `radio` is a checkbox which allows multible selection
+* `checkbox` is regular old chceckbox. Only one selection available
+* `submit` creates a button which will 'accept` user input and set it to processing
+
+Only diffrent field `textarea` allows user to input user multible lines of text.
 
 ### Frames:
 ```HTML
