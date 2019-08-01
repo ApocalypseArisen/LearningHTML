@@ -134,10 +134,11 @@ It used to allow you to divide page into individual frames which could be custom
 Better avoid using this unless absolutlly necesarry.
 
 ### Customizing whole page:
-* Using arguments within opning body tag will afect whole page 
+Using arguments within `body` tag will affect whole page 
 
-'<body bgcolor=#002b3c text="white">' 
-bgcolor will set background color for entire page while text will set default color of a text within whole body tag.
+For example `<body bgcolor=#002b3c text="white">'
+
+`bgcolor` will set background color for the entire page while `text` will set default color of a text within whole body tag.
 
 
 # CSS section
