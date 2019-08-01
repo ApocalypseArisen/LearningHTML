@@ -1,21 +1,29 @@
 # LearningHTML/CSS/PHP
-Learning basics of creating websities uding modern solutions with the help of <a href = "https://www.sololearn.com/" target = "_blank">SoloLearn courses</a>
- * HTML - HyperText Markup Language
- * CSS -
- * php -
+This document and acompaning html documents were created with the help of a [SoloLearn](https://www.sololearn.com)> courses.
+All documents were created as part of a learning process to master creation of your own custmos websities. This documents contains information which I thought were the most usefull to have written down somewhere.
+If youb are looking for learning html/css/php skills yourself I higly recomend going through sololeaern courses first and look at my html files as reference.
+ * [HTML](https://www.sololearn.com/Course/PHP/) - *HyperText Markup Language*
+ * [CSS](https://www.sololearn.com/Course/HTML/) - **
+ * [PHP](https://www.sololearn.com/Course/CSS/) - **
 
 # HTML section
 
 ### Basic info:
-* <> - openning a tag
-* <> - closing tag
-* html - "html code tag"
-* head - backend/non-visual elemnts of a website
-* body - text images hyperlings etc.
-* head/body - both necessary to create a basic site
-* title tag - name of the page
-* p tag - basic paragraph
-* < br /> - line break
+* '<tagname>' - openning a tag
+* '</tagname>' - closing tag
+
+'''HTML
+<html>
+    <head>
+    <title>Hello World!</title>
+    </head>
+    <body>Hello World!</body>
+</html>
+'''
+Html tag contains the whole contents of a single html page. Head tag is like backend of a html page. It handles stuff which are not visible to the end user.
+The title tag sets the name of the page which will be visible as the tab name within your browser
+Body tag is where the real fun begins. It's what will be visible to the edn user. The code above will dispaly the simplest html page.
+
 
 ### Formatting:
 * Just put b (for bold) in tag bracekts like with p and others
@@ -75,10 +83,12 @@ Here is a example of a frame. On most modern browsers this will display message 
 It used to allow you to divide page into individual frames which could be customized with diffrent atributes such as scrolling, resizing, borders etc.
 Better avoid using this unless absolutlly necesarry.
 
-### Customizing whole page
-* Using arguments with opening body tag will afect whole page 
-* text = "color" argument will set the color of text for the entire page
-* bgcolor will set background color of the entire page
+### Customizing whole page:
+* Using arguments within opning body tag will afect whole page 
+
+'<body bgcolor=#002b3c text="white">' 
+bgcolor will set background color for entire page while text will set default color of a text within whole body tag.
+
 
 # CSS section
 
