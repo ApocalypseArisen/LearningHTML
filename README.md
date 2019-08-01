@@ -10,17 +10,17 @@ If you are looking to learn html/css/php skills yourself I highly recomend going
 # HTML section
 
 ### Basic info:
-* '<tagname>' - openning a tag
-* '</tagname>' - closing tag
+* `<tagname>` - openning a tag
+* `</tagname>` - closing tag
 
-'''HTML
+```HTML
 <html>
     <head>
     <title>Hello World!</title>
     </head>
     <body>Hello World!</body>
 </html>
-'''
+```
 Html tag contains the whole contents of a single html page. Head tag is like backend of a html page. It handles stuff which are not visible to the end user.
 The title tag sets the name of the page which will be visible as the tab name within your browser
 Body tag is where the real fun begins. It's what will be visible to the edn user. The code above will dispaly the simplest html page.
