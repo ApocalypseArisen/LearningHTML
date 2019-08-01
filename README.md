@@ -65,9 +65,11 @@ Code above will produce this results:
     <li>First element</li>
     <li>Second element</li>
 </ol>
-* Lists are created by using ol tag
-* Items are listed using a li tag
-* Alternativly if you want to have unlisted list use ul tag instead of ol
+If you don't wan't to use numerated lists you can change `ol` tag for `ul` tag which will change the list like that:
+<ul>
+    <li>First element</li>
+    <li>Second element</li>
+</ul>
 
 ### Tables:
 * Tables are created using table tag
