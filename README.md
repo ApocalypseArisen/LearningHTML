@@ -73,12 +73,28 @@ If you don't wan't to use numerated lists you can change `ol` tag for `ul` tag w
 </ul>
 
 ### Tables:
-* Tables are created using table tag
-* You can add atributes to by adding them in opening table tag
-* Possible atributes are align, border - specifies the size of a table border
-* tr tag creates rows and a td tag blaced within tr tag creates columns
-* Using colspan argument with td tag allows to spcify how long should siad column be
-* bgcolor argument allows to set color of column or entire row tebendin whether used with tr or td tag
+<table>
+        <tr>
+            <td>blue</td>
+            <td>yellow</td>
+        </tr>
+</table>
+Table above was created as example using code bellow. 
+```HTML
+<table>
+        <tr>
+            <td bgcolor="blue">blue</td>
+            <td bgcolor="yellow">yellow</td>
+        </tr>
+</table>
+```
+
+* `tabele` tag contains the entire table. 
+* `tr` tag creates rows
+* `td` tag creates columns
+* `bgcolor` allows you to change bacgroun color of specific column/row/entire table dependig where you place it.
+
+Using `colspan = "2"` determines how wide given column is.
 
 ### Forms:
 * Basicly they allow you to collect data fro  user and send them to process somewhere else
