@@ -120,6 +120,7 @@ Forms allow you to collect informations from user. In html section we only handl
 * `submit` creates a button which will 'accept` user input and set it to processing
 
 Only diffrent field `textarea` allows user to input multible lines of text.
+
 Argument `method` dictates how data will be sent. `post` hides data which means it is usefull for sending sensitive infdormation like passwords. `get` on the other hand sends data as open plain text visible in the address bar of the site loaded after pressing submit button. It is also default way of sending information.
 
 ### Frames:
