@@ -142,6 +142,15 @@ For example `<body bgcolor=#002b3c text="white">`
 
 `bgcolor` will set background color for the entire page while `text` will set default color of a text within whole body tag.
 
+### Dividing page into sections
+By using:
+
+```HTML
+<div class="section">
+</div>
+```
+You can divide your page into sections which will allow you to easilly find things you ca modify and will also clear up tge page for the end user.
+
 
 # CSS section
 
