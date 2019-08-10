@@ -90,10 +90,11 @@ Table above was created as example using code bellow.
 </table>
 ```
 
-* `tabele` tag contains the entire table. 
+* `table` tag contains the entire table
 * `tr` tag creates rows
 * `td` tag creates columns
 * `bgcolor` allows you to change bacgroun color of specific column/row/entire table dependig where you place it.
+* `border = "`number`"` you can specify the size of the border
 
 Using `colspan = "2"` determines how wide given column is.
 
@@ -110,9 +111,10 @@ Forms allow you to collect informations from user. In html section we only handl
             <input type="submit" value="Submit" />
 </form>
 ```
+
 `form` tag contains all interactions with the user. `input` tag contains defrent methods user input.
 
-`type` specifies what method of input will be used,
+`type` specifies what method of input will be used:
 * `text` accepts plain text
 * `password` also accepts text but it hides input and is more secure to use with passwords
 * `radio` is a checkbox which allows multible selection
