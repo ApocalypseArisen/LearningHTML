@@ -9,7 +9,7 @@ If you are looking to learn html/css/php skills yourself I highly recomend going
 * [CSS](https://www.sololearn.com/Course/HTML/) - ****
 * [PHP](https://www.sololearn.com/Course/CSS/) - ****
 
-## HTML section
+## HTML
 
 ### Basic info
 
@@ -172,7 +172,9 @@ By using:
 
 You can divide your page into sections which will allow you to easilly find things you ca modify and will also clear up tge page for the end user.
 
-### HTML 5
+## HTML 5
+
+### Introduction
 
 It is a most modern version of HTML which adds new ways od interacting with user.
 Forms 2.0, drag and drop, audio and vudeo, offline webapps, history, local storage, geolocation and web messaging.
@@ -187,6 +189,6 @@ Thera are introduced 7 new data models:
 * flow - conatins most of the rest of models that would be included in the normal flow of the document
 * sectioning- defines navigation, footers and other site design elements
 
-## CSS section
+## CSS
 
-## php section
+## PHP
