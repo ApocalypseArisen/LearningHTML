@@ -1,6 +1,6 @@
 # LearningHTML/CSS/PHP
 
-This document and acompaning html files were created with the help of a [SoloLearn](https://www.sololearn.com) courses.
+This document and acompaning html files were created with the help of a [SoloLearn](https://www.sololearn.com) courses. Some example code is my own while some is taken from the SoloLearn website.
 All documents were created as part of a learning process to master creation of your own custom websities. This documents contains information which I thought were the most usefull to have written down somewhere.
 
 If you are looking to learn html/css/php skills yourself I highly recomend going through sololeaern courses first and look at my html files as reference.
@@ -271,6 +271,59 @@ Parametres:
 
 **To understand and use this API I recomend at least some familiarity with [javaScript](https://www.sololearn.com/Course/JavaScript/)**
 
+## Drag&Drop
+
+Most HTML elemts can be made draggable by adding a `draggable="true"` argument.
+
+API is event based.
+
+First you need to define three functions:
+
+```HTML
+function allowDrop(ev)
+{
+    ev.preventDefault();
+}
+```
+
+This function prevents default web browser behaviour which is to open a object in it.
+
+```HTML
+function dragobject(ev)
+{
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+```
+
+This code allows user to click and drag desired object identufied by id.
+
+```HTML
+function drop(ev)
+{
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+```
+
+This function places draggable object in new location.
+
+All this code needs to be placed in a `<head>` section within `<script>` tag.
+
+Ther are also some modifications which need to be introduced within `<body>` section.
+
+First you need to create section where draggable item can be dropped:
+
+```HTML
+<div id="box" ondrop="drop(event)" ondragover="allowDrop(event)" width:200px; height:200px">
+</div>
+```
+
+Second you need to have item whch can be dragged:
+
+```HTML
+<img id="draggable" src="src.jpg" draggable=true />
+```
 
 ## CSS
 
