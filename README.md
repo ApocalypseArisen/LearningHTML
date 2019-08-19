@@ -279,7 +279,7 @@ API is event based.
 
 First you need to define three functions:
 
-```HTML
+```JAVASCRIPT
 function allowDrop(ev)
 {
     ev.preventDefault();
@@ -288,7 +288,7 @@ function allowDrop(ev)
 
 This function prevents default web browser behaviour which is to open a object in it.
 
-```HTML
+```JAVASCRIPT
 function dragobject(ev)
 {
     ev.dataTransfer.setData("text", ev.target.id);
@@ -297,7 +297,7 @@ function dragobject(ev)
 
 This code allows user to click and drag desired object identufied by id.
 
-```HTML
+```JAVASCRIPT
 function drop(ev)
 {
     ev.preventDefault();
@@ -324,6 +324,78 @@ Second you need to have item whch can be dragged:
 ```HTML
 <img id="draggable" src="src.jpg" draggable=true />
 ```
+
+## Drawing Shapes (SVG)
+
+**S**calabale **V**ector **G**raphics is used to draw shapes using HTML-style markup.
+
+HTML can use svg images. You can add them like any other jpg img.
+
+To draw a cirvle using SVG
+
+```HTML
+<svg width="1000" height="1000">
+    <circle cx="50" cy="50" r="10" fill="red" />
+</svg>
+```
+
+* cx and cy detremin the sie of teh circle
+* r detrmins radian of the circle
+* fill sets the color of the circle
+* width and height determ,in the size of the canvas
+
+There is a number of fugures which can be used with svg
+
+* rect - draws and rectangle, needs height and width arguments
+* line - draws line on the screen needs x1,y1,x2,y2 coordinats of starting and ending point
+* eclispe draws eclispe, it needs r1 and r2
+* polygon - it spans the figure between atleast three specified points with argument `points="100 100, 200 200, 300 300"`
+
+## Animations
+
+Using a `<animate>` within a fugure tag you can make simple animations
+
+```HTML
+<rect width="10" height="20" fill="yellow">
+    <animate attributeName="x" from="20" to="100" dur="4s" fill="freeze" repeatCount="5">
+</rect>
+```
+
+* attributeName - which atrribute will be affected by the animation
+* from - startin point
+* to end point
+* dur - how long the animation will take
+* fill - what to do with object after finishing the animation (remove, freeze)
+* repeatCount - how many time wile the animation play
+
+By using additional `<path />` tag you can define how object will move. The path is defined i `p=""` argument
+
+Some most uisefull p commands:
+
+* M x y places virtual pen at x,y cordinats
+* L x y draws a line x pixels left and y pixels up
+* Z closes the shape
+
+## Canvas
+
+Canvas in pricnciple is similiar to SVG only that it uses JavaScript
+
+By using a `<canvas>` tag you create a space in which you can draw using `<script>` tag. The canvas needs to have `id=""` argument to be identufied by the script.
+
+Upper rleft corner is coordinates (0,0) and bottom right corner is (x,y) coordints for canvas of size x and y.
+
+Let's drew a simple rectangle with canvas
+
+```JAVASCRIPT
+var canvas=document.getElementId("canvasid")
+var ctx=canvas.getContext("2d");
+ctx.fillStyle="rgba(0,100,90,11)";
+ctx.fillRect (36, 10, 22, 80);
+```
+
+The first two lines identify teh canvas in which we will be drawing.
+
+Second line sets how next figure will be filled and the next command draws a rectangle at (36,10) with wall size of 22 and 80.
 
 ## CSS
 
