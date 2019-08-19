@@ -189,6 +189,89 @@ Thera are introduced 7 new data models:
 * flow - conatins most of the rest of models that would be included in the normal flow of the document
 * sectioning- defines navigation, footers and other site design elements
 
+### Page structure
+
+* on the of the page is header which contains things like website logo
+* second is nav which contains navigation information
+* article and aside on the same level - one contains main information and other additional resources like images
+* footer contains legal information/privacy or terms of use
+
+Header is operated by usage of `<header> </header>` tag. Footer uses `<footer></footer>` tag.
+
+Nav element links to other pages/elements of existimg page and can be created like in a example below
+
+```HTML
+<nav>
+    <ul>
+        <li><a href="link">Link 1</a></li>
+        <li><a href="link">Link 2</a></li>
+    </ul>
+</nav>
+```
+
+`<article>` replaces HTML 4 `<div>` tag.
+`<section>` contains logical structures within article. For example it can be used to divied the page into pieces.
+
+### Audio
+
+HTML 5 intorduces `<audio controls>` tag which allows to easilly include audio element into the website
+
+Source is added by adding `src="source.mp3"` argument to `<audio controls>` tag. 
+If you want to use  multible sources instead of using `<src>` argument you can use `<source src="">` tag to specify multible sources.
+The order by which `<source>` tags are specifeis which ones will be used first.
+
+The text which can be added between `<audio controls>` tag will be displayed when the host website is unaible to play audio files.
+
+Additiona arguments which can be added to `<audio controls>` tag are:
+
+* autoplay - makes the audio file play automathicly when teh page is loaded
+* loop - makes the file replay when it raches end.
+
+## Video
+
+Video elementh is essentialy the same as audio element the only diffrence being using a `<video controls>` tag. Rest of the information above stays true for the video element.
+
+## Progress Bar
+
+By usage of `<progress>` tag you can create progress bars on thje website
+
+This arguments specify the look of the bar:
+
+* `min=""` sets minimal value of the bar
+* `max=""` sets maximal value of the bar
+* `value=""` sets the current value dispaled on the bar
+
+## Web storage
+
+HTML 5 introduces API which allows to store data on local host more effinietly.
+
+Ther are two types of storage objects avialable:
+
+* `sessionStorage()`
+* `localStorage()`
+
+The diffrence between the two being that local storage lasts after the user closes their website.
+
+Setting new value: `localStorage.setItem("key","value");`
+Getting existing value: `alert(localStorage.getItem("key"));`
+Deleteing value: `localStorage.removeItem("key");`
+Clear all values: `localStorage.clear();`
+
+## Geolocation
+
+Onether API introduced with HTML 5 allows website to get user location.
+
+It is used by calling `navigator.geolocation.getCurrentPosition();`
+
+Parametres:
+
+* `showLocation` - mandatory, defines how retrived data will be handled
+* `ErrorHandler` - defines how any errors will be dealt with
+* `Options` - additional setting on how the data will be retrived
+
+**To understand and use this API I recomend at least some familiarity with [javaScript](https://www.sololearn.com/Course/JavaScript/)**
+
+
 ## CSS
 
 ## PHP
