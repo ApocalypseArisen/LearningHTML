@@ -227,11 +227,11 @@ Additiona arguments which can be added to `<audio controls>` tag are:
 * autoplay - makes the audio file play automathicly when teh page is loaded
 * loop - makes the file replay when it raches end.
 
-## Video
+### Video
 
 Video elementh is essentialy the same as audio element the only diffrence being using a `<video controls>` tag. Rest of the information above stays true for the video element.
 
-## Progress Bar
+### Progress Bar
 
 By usage of `<progress>` tag you can create progress bars on thje website
 
@@ -241,7 +241,7 @@ This arguments specify the look of the bar:
 * `max=""` sets maximal value of the bar
 * `value=""` sets the current value dispaled on the bar
 
-## Web storage
+### Web storage
 
 HTML 5 introduces API which allows to store data on local host more effinietly.
 
@@ -257,7 +257,7 @@ Getting existing value: `alert(localStorage.getItem("key"));`
 Deleteing value: `localStorage.removeItem("key");`
 Clear all values: `localStorage.clear();`
 
-## Geolocation
+### Geolocation
 
 Onether API introduced with HTML 5 allows website to get user location.
 
@@ -271,7 +271,7 @@ Parametres:
 
 **To understand and use this API I recomend at least some familiarity with [javaScript](https://www.sololearn.com/Course/JavaScript/)**
 
-## Drag&Drop
+### Drag&Drop
 
 Most HTML elemts can be made draggable by adding a `draggable="true"` argument.
 
@@ -325,7 +325,7 @@ Second you need to have item whch can be dragged:
 <img id="draggable" src="src.jpg" draggable=true />
 ```
 
-## Drawing Shapes (SVG)
+### Drawing Shapes (SVG)
 
 **S**calabale **V**ector **G**raphics is used to draw shapes using HTML-style markup.
 
@@ -351,7 +351,7 @@ There is a number of fugures which can be used with svg
 * eclispe draws eclispe, it needs r1 and r2
 * polygon - it spans the figure between atleast three specified points with argument `points="100 100, 200 200, 300 300"`
 
-## Animations
+### Animations
 
 Using a `<animate>` within a fugure tag you can make simple animations
 
@@ -376,7 +376,7 @@ Some most uisefull p commands:
 * L x y draws a line x pixels left and y pixels up
 * Z closes the shape
 
-## Canvas
+### Canvas
 
 Canvas in pricnciple is similiar to SVG only that it uses JavaScript
 
