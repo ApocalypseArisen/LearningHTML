@@ -397,6 +397,40 @@ The first two lines identify teh canvas in which we will be drawing.
 
 Second line sets how next figure will be filled and the next command draws a rectangle at (36,10) with wall size of 22 and 80.
 
+### Basic editing with Canvas
+
+`ctx.font="bold 12px Arial"` sets the look and the fill of teh text. `ctx=textAligb="test"` ustawia treść, a `ctx.fillText("test", 10, 30) rysuje tekst we wskazanym miejscu.
+
+`ctx.translate(x,y);` przesuwa element o x i  y względem poprzedniego.
+
+`ctx.rotate((Math.PI/180)*x)` obraca element o x radianów.
+
+`ctx.scale(1.8, 5)` skaluje następy element względem poprzedniego w obu wymiarach.
+
+### Canvas vs SVG
+
+**SVG** is better for simple animations, drowing is done with vectors. Best suited for aplications like maps.
+
+**Canvas** is better for graphics intensive aplications as it's more resourcces intensive. Drawing is done programmaticly with pixels.
+
+### Forms
+
+Usage of forms in HTML 5 is similiar to HTML 4 wit addition of couple new atributes.
+
+* `placeholder="text"` will display generic value to user in the field he will fill.
+* `autofocus` will autmaticly focus keyboard on this field when the page is loaded.
+* `required` will force user to input something in this field
+* `type="search"` introduces searchboxes
+* ```HTML
+<datalist id+"example">
+    <option value="1">
+    <option value="2">
+</datalist>
+```
+
+This list will give user some preconfigured values to choose from
+* New fields which were also added are: `email`, `url`, `tel`
+
 ## CSS
 
 ## PHP
