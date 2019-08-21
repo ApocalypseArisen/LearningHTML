@@ -421,15 +421,16 @@ Usage of forms in HTML 5 is similiar to HTML 4 wit addition of couple new atribu
 * `autofocus` will autmaticly focus keyboard on this field when the page is loaded.
 * `required` will force user to input something in this field
 * `type="search"` introduces searchboxes
-* ```HTML
-<datalist id+"example">
+* New fields which were also added are: `email`, `url`, `tel`
+
+```HTML
+<datalist id="example">
     <option value="1">
     <option value="2">
 </datalist>
 ```
 
 This list will give user some preconfigured values to choose from
-* New fields which were also added are: `email`, `url`, `tel`
 
 ## CSS
 
