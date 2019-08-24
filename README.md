@@ -413,7 +413,7 @@ Second line sets how next figure will be filled and the next command draws a rec
 
 **Canvas** is better for graphics intensive aplications as it's more resourcces intensive. Drawing is done programmaticly with pixels.
 
-### Forms
+### Forms 2
 
 Usage of forms in HTML 5 is similiar to HTML 4 wit addition of couple new atributes.
 
