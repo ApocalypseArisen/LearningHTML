@@ -1,22 +1,98 @@
+/*Kolor tła*/
+body {background-color: #00425c;}
+/* Sekcja tekstu */
 #begining
 {
     color:white;
-    background-color:#002b3c;
-}
-#review
-{
-    color:white;
-    background-color:#002b3c;
+    background-color:#2a6177;
 }
 #sidepanel
 {
     color:white;
-    background-color:#063d52;
+    background-color:#2a6177;
 }
 #foot
 {
     color:white;
-    background-color:#063041;
+    background-color:#2a6177;
+}
+/* Koniec sekcji tekstu*/
+
+/* Czcionki */
+h1
+{
+    font-family: "Microgramma D Extended";
+    font-size: 30px;
 }
 
+li a
+{
+    font-family: "Microgramma D Extended";
+}
 
+footer, article, begining
+{
+    font-family: "SF Pro Display";
+}
+/* Konic czcionki */
+
+/* Tabela */
+table, td, th 
+{
+    border: 1px solid black;
+    text-align: center;
+}
+
+table 
+{
+    border-collapse: collapse;
+}
+
+tr:hover {background-color: #48778a;}
+/* Koniec Tabeli */
+
+/* Sekcja stylu paska  */
+ul 
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2a6177;
+}
+
+li {float: left;}
+
+li a 
+{
+    color: white;
+    display: block;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+li a:hover:not(.current) 
+{
+    background-color: #48778a;
+}
+
+.current
+{
+    background-color: #00334c;
+}
+/* Koniec sekcji stylu paska */
+
+/* Układ strony */
+html, body
+{
+    height: 100%;
+}
+
+footer
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%
+}
+/* Koniec układ strony */
