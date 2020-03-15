@@ -86,13 +86,15 @@ li a:hover:not(.current)
 /* Układ strony */
 html, body
 {
-    height: 100%;
+    position: relative;
+    min-height: 100vh;
 }
 
 footer
 {
     position: absolute;
     bottom: 0;
-    width: 100%
+    width: 100%;
+    overflow: hidden;
 }
 /* Koniec układ strony */
