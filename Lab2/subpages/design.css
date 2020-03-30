@@ -1,29 +1,27 @@
 /*Kolor tła*/
 body {background-color: #282828;}
 /* Sekcja tekstu */
-#begining
+#begining, #task, #sidepanel, #foot
 {
     color:white;
     background-color:#303030;
 }
-#sidepanel
+#begining, #task
 {
-    color:white;
-    background-color:#303030;
-}
-#foot
-{
-    color:white;
-    background-color:#303030;
+    text-align: center;
 }
 /* Koniec sekcji tekstu*/
 
 /* Padding (Granice tekstu)*/
 p
 {
-    padding-bottom: 20px;
     padding-left: 15px;
     padding-right: 15px;
+}
+#task, #begining
+{
+    padding-top: 3px;
+    padding-bottom: 10px;
 }
 /* Koniec Padding */
 
@@ -41,6 +39,27 @@ footer, article, begining, li a, h1
     font-family: "SF Pro Display";
 }
 /* Konic czcionki */
+
+/*Formy*/
+input
+{
+    margin-top: 4px;
+    color: white;
+    background-color: #282828;
+    border: none;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.potwierdz
+{
+    color: white;
+    background-color: #85ba3c;
+    cursor: pointer;
+    border: none;
+    margin-top: 4px;
+    padding: 6px;
+}
+/*Koniec formy
 
 /* Tabela *
 table, td, th 
@@ -71,9 +90,7 @@ tr:hover {background-color: #48778a;}
 {
     text-align: center;
     width: 400px;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
+    display: inline-block;
 }
 .menu a:hover
 {
@@ -89,7 +106,7 @@ tr:hover {background-color: #48778a;}
 html, body
 {
     position: relative;
-    min-height: 100vh;
+    min-height: 110vh;
 }
 
 footer

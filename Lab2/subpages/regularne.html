@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+    <head>
+        <script>
+            function validateForm() {
+              var x = document.forms["przyklad"]["imie"].value;
+              if (x == "") {
+                alert("Name must be filled out");
+              }
+              alert("Name must be filled out");
+              alert("Inny alert");
+            }
+        </script>
+        <meta charset="UTF-8"> 
+        <link rel="stylesheet" href="design.css">
+        <title>Wyrażenia regularne</title>
+    </head>
+    <body>
+        <article>
+            <section id="begining">
+                <h1><big>Wyrażenia regularne</big></h1>
+                <hr width="50%" style="color:#85ba3c" />
+                <div class="menu">
+                    <a href="../index.html">Start</a>
+                    <a class="current" href="subpages/regularne.html">Wyrażenia regularne</a>
+                    <a href="subpages/h2.html">Formularze i Java Script</a>
+                    <a href="subpages/hc.html">Dynamiczna zmiana obrazów</a>
+                    <a href="subpages/hdok.html">Dynamiczne podmienianie obrazów</a>
+                    <a href="subpages/">Własnoręcznia animacja</a>
+                    <a href="subpages/">Prosta gra zręcznościowa</a>
+                </div>
+                <hr width="50%" style="color:#85ba3c" />
+                <p></p>
+            </secton>
+        </article>
+        <article>
+            <section id="task">
+                <h3>Przykładowa forma:</h3>
+                <form name="przyklad" onsubmit="validateForm()">
+                    <label for="imie">Imię</label><br>
+                    <input type="text" name="imie"><br>
+                    <label for="nazwisko">Nazwisko</label><br>
+                    <input type="text" name="nazwisko"><br>
+                    <label for="data">Data</label><br>
+                    <input type="text" name="data"><br>
+                    <label for="mail">E-mail</label><br>
+                    <input type="text" name="mail"><br>
+                    <label for="login">Login</label><br>
+                    <input type="text" name="login"><br>
+                    <label for="pass">Hasło</label><br>
+                    <input type="password" name="pass"><br>
+                    <label for="pass2">Powtórz hasło</label><br>
+                    <input type="password" name="pass2"><br>
+                    <input class="potwierdz" type="submit" value="Sprawdź">
+                </form>
+            </section> 
+        </article>
+        <div class="space"></div>
+        <footer id="foot">
+            <h3>Informacje</h3>
+            <p> 
+                Autor: Adam Krizar 241276 <br> Przedmiot: Projektowanie Interfejsów Webowych: laboratorium 2 
+            </p>
+        </footer>
+    </body>
+</html>
