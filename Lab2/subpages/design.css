@@ -1,0 +1,102 @@
+/*Kolor tła*/
+body {background-color: #282828;}
+/* Sekcja tekstu */
+#begining
+{
+    color:white;
+    background-color:#303030;
+}
+#sidepanel
+{
+    color:white;
+    background-color:#303030;
+}
+#foot
+{
+    color:white;
+    background-color:#303030;
+}
+/* Koniec sekcji tekstu*/
+
+/* Padding (Granice tekstu)*/
+p
+{
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* Koniec Padding */
+
+/* Czcionki */
+a
+{
+    color: #85ba3c;
+}
+h1
+{
+    font-size: xx-large;
+}
+footer, article, begining, li a, h1
+{
+    font-family: "SF Pro Display";
+}
+/* Konic czcionki */
+
+/* Tabela *
+table, td, th 
+{
+    border: 1px solid black;
+    text-align: center;
+}
+
+table 
+{
+    border-collapse: collapse;
+}
+
+tr:hover {background-color: #48778a;}
+/* Koniec Tabeli */
+
+/* Sekcja stylu paska  */
+.menu a
+{
+    text-decoration: none;
+    padding: 12px;
+    overflow: hidden;
+    background-color: #303030;
+    color: white;
+    display: block;
+}
+.menu
+{
+    text-align: center;
+    width: 400px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+.menu a:hover
+{
+    background-color: #282828;
+}
+.menu a.current
+{
+    background-color: #85ba3c;
+}
+/* Koniec sekcji stylu paska */
+
+/* Układ strony */
+html, body
+{
+    position: relative;
+    min-height: 100vh;
+}
+
+footer
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+}
+/* Koniec układ strony */
