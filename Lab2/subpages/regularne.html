@@ -1,16 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="pl">
     <head>
-        <script>
-            function validateForm() {
-              var x = document.forms["przyklad"]["imie"].value;
-              if (x == "") {
-                alert("Name must be filled out");
-              }
-              alert("Name must be filled out");
-              alert("Inny alert");
-            }
-        </script>
+        <script type="text/javascript" src="regularne.js"></script>
         <meta charset="UTF-8"> 
         <link rel="stylesheet" href="design.css">
         <title>Wyrażenia regularne</title>
@@ -41,8 +32,10 @@
                     <input type="text" name="imie"><br>
                     <label for="nazwisko">Nazwisko</label><br>
                     <input type="text" name="nazwisko"><br>
+                    <label for="phone">Numer telefonu</label><br>
+                    <input type="phone" name="phone" value="+"><br>
                     <label for="data">Data</label><br>
-                    <input type="text" name="data"><br>
+                    <input class="date" type="text" name="data" placeholder="DD/MM/YYYY"><br>
                     <label for="mail">E-mail</label><br>
                     <input type="text" name="mail"><br>
                     <label for="login">Login</label><br>
