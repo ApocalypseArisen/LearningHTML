@@ -10,6 +10,11 @@ body {background-color: #282828;}
 {
     text-align: center;
 }
+::selection 
+{
+    color: white;
+    background: #85ba3c;
+}
 /* Koniec sekcji tekstu*/
 
 /* Padding (Granice tekstu)*/
@@ -63,7 +68,29 @@ input
 {
     display: none;
 }
-/*Koniec formy
+/*Koniec formy*/
+
+/*lab2*/
+.math
+{
+    width: 80px;
+    text-align: center;
+}
+select
+{
+    color: white;
+    background-color: #303030;
+    cursor: pointer;
+    border: none;
+    -moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none
+}
+select:hover
+{
+    background-color: #282828;
+}
+/*Koniec lab2*/
 
 /* Tabela */
 table, td, th 
@@ -71,7 +98,6 @@ table, td, th
     border: 1px solid black;
     text-align: center;
 }
-
 table 
 {
     border-collapse: collapse;
