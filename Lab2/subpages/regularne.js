@@ -1,5 +1,13 @@
 function validateForm() 
 {
+    document.getElementById("info1").style.display = "none"
+    document.getElementById("info2").style.display = "none"
+    document.getElementById("info3").style.display = "none"
+    document.getElementById("info4").style.display = "none"
+    document.getElementById("info5").style.display = "none"
+    document.getElementById("info6").style.display = "none"
+    document.getElementById("info7").style.display = "none"
+    document.getElementById("info8").style.display = "none"
     var mistake = false;
     var name = document.forms["przyklad"]["imie"].value;
     var surname = document.forms["przyklad"]["nazwisko"].value;
@@ -10,29 +18,35 @@ function validateForm()
     var password = document.forms["przyklad"]["pass"].value;
     var password2 = document.forms["przyklad"]["pass2"].value;
 
-    if (!/^[a-zA-Z]+$/.test(name)) 
-    {
-        mistake = true;
-        document.getElementById("info1").style.display = "block"
-        document.getElementById("info1").innerHTML = "Imie musi być niepuste i zawierać same litery!";
-    }
     if (name == "") 
     {
         mistake = true;
         document.getElementById("info1").style.display = "block"
         document.getElementById("info1").innerHTML = "Imie musi być niepuste!";        
     }
-    if (!/^[a-zA-Z]+$/.test(surname)) 
+    else
     {
-        mistake = true;
-        document.getElementById("info2").style.display = "block"
-        document.getElementById("info2").innerHTML = "Nazwisko musi zawierać same litery!";
+        if (!/^[a-zA-Z]+$/.test(name)) 
+        {
+            mistake = true;
+            document.getElementById("info1").style.display = "block"
+            document.getElementById("info1").innerHTML = "Imie musi być niepuste i zawierać same litery!";
+        }
     }
     if (surname == "")
     {
         mistake = true;
         document.getElementById("info2").style.display = "block"
         document.getElementById("info2").innerHTML = "Nazwisko musi być niepuste!";
+    }
+    else
+    {
+        if (!/^[a-zA-Z]+$/.test(surname)) 
+        {
+            mistake = true;
+            document.getElementById("info2").style.display = "block"
+            document.getElementById("info2").innerHTML = "Nazwisko musi zawierać same litery!";
+        }
     }
 
     if (phone.length == 12)
@@ -111,11 +125,14 @@ function validateForm()
         document.getElementById("info6").style.display = "block"
         document.getElementById("info6").innerHTML = "Login nie moze być pusty!";
     }
-    if (!/^[a-z]+$/.test(login)) 
+    else
     {
-        mistake = true;
-        document.getElementById("info6").style.display = "block"
-        document.getElementById("info6").innerHTML = "Login może mieć tylko małe litery!";
+        if (!/^[a-z]+$/.test(login)) 
+        {
+            mistake = true;
+            document.getElementById("info6").style.display = "block"
+            document.getElementById("info6").innerHTML = "Login może mieć tylko małe litery!";
+        }
     }
 
     if(password != "")

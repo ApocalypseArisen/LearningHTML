@@ -29,22 +29,31 @@
                 <section id="task">
                     <h3>Wprowadź parametry równania:</h3>
                     <p>
-                        <input class="math" type="text" id="Avalue" name="A">
+                        <input class="math" type="text" id="Avalue" name="A" value="1">
                         × x<sup>2</sup>  
                         <select id="znak1">
                             <option value="+">+</option>
                             <option value="-">-</option>
                         </select>
-                        <input class="math" type="text" id="Bvalue" name="B">
+                        <input class="math" type="text" id="Bvalue" name="B" value="0">
                         × x 
-                        <select calss="box" id="znak2">
+                        <select id="znak2">
                             <option value="+">+</option>
                             <option value="-">-</option>
                         </select>
-                        <input class="math" type="text" id="Bvalue" name="B">
+                        <input class="math" type="text" id="Cvalue" name="C" value="0">
                         = 0
                     </p>
-                </section>  
+                    <p class="error" id="info1"></p>
+                    <p class="error" id="info2"></p>
+                    <p class="error" id="info3"></p>
+                    <button class="potwierdz" type="button" onclick="calculate()">Oblicz</button>
+                </section>
+                <section id="tabela">
+                    <h3>Wynik:</h3>
+                    <p id="wynik"></p>                    
+                    <button class="potwierdz" type="button" onclick="reset()">Oblicz ponownie</button>
+                </section> 
             </article>
             <div class="space"></div>
         </div>
