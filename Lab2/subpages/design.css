@@ -70,6 +70,15 @@ input
 }
 /*Koniec formy*/
 
+/*Obrazki*/
+img
+{
+    padding-left: 2px;
+    padding-right: 2px;
+    border: #85ba3c;
+}
+/*Koniec Obrazki*/
+
 /*lab2*/
 .math
 {
