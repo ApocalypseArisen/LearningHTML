@@ -70,23 +70,31 @@ input
 }
 /*Koniec formy*/
 
+/*Animacja*/
+#ship
+{
+  display: none;
+}
+/*Koniec Animacja*/
+
 /*Obrazki*/
 img
 {
     padding-left: 2px;
     padding-right: 2px;
 }
+/*Koniec Obrazki*/
+
+/*Zwierzęta*/
 .split 
 {
     width: 50%;
     position: fixed;
     z-index: 1;
-    /*top: 0;
-    overflow-x: hidden;*/
 }
 .left {left: 0;}
 .right {right: 0;}
-/*Koniec Obrazki*/
+/*Koniec Zwierzęta*/
 
 /*lab2*/
 .math
