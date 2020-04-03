@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+    <head>
+        <script type="text/javascript" src="dynamic.js"></script>
+        <meta charset="UTF-8"> 
+        <link rel="stylesheet" href="design.css">
+        <title>Podemienianie obrazów</title>
+    </head>
+    <body>
+        <div class="wrap">
+            <article>
+                <section id="begining">
+                    <h1><big>Dynamiczne podmienianie obrazów</big></h1>
+                    <hr width="50%" style="color:#85ba3c" />
+                    <div class="menu">
+                        <a href="../index.html">Start</a>
+                        <a href="regularne.html">Wyrażenia regularne</a>
+                        <a href="form.html">Formularze i Java Script</a>
+                        <a href="image.html">Dynamiczna zmiana obrazów</a>
+                        <a class="current" href="dynamic.html">Dynamiczne podmienianie obrazów</a>
+                        <a href="subpages/">Własnoręcznia animacja</a>
+                        <a href="subpages/">Prosta gra zręcznościowa</a>
+                    </div>
+                    <hr width="50%" style="color:#85ba3c" />
+                    <p></p>
+                </secton>
+            </article>
+            <article>
+                <section id="task">
+                    <div class="split left">
+                        <img id="img1" src ="resources/birdout.gif"  onmouseover="firstOver()" onmouseout="firstOut()"/>
+                        <br><img id="img2" src ="resources/cowout.gif"  onmouseover="secondOver()" onmouseout="secondOut()"/>
+                        <br><img id="img3" src ="resources/craneout.gif"  onmouseover="thirdOver()" onmouseout="thirdOut()"/>
+                        <br><img id="img4" src ="resources/dogout.gif"  onmouseover="fourthOver()" onmouseout="fourthOut()"/>
+                        <br><img id="img5" src ="resources/gatorout.gif"  onmouseover="fifthOver()" onmouseout="fifthOut()"/>
+                        <br><img id="img6" src ="resources/pigout.gif"  onmouseover="sixthOver()" onmouseout="sixthOut()"/>
+                        <br><img id="img7" src ="resources/reindeerout.gif"  onmouseover="seventhOver()" onmouseout="seventhOut()"/>
+                        <br><img id="img8" src ="resources/turkeyout.gif"  onmouseover="eightOver()" onmouseout="eightOut()"/>
+                        <br><img id="img9" src ="resources/snakeout.gif"  onmouseover="ninethOver()" onmouseout="ninethOut()"/>
+                        <br><img id="img10" src ="resources/walrusout.gif"  onmouseover="tenthOver()" onmouseout="tenthOut()"/>
+                    </div>
+                    <div class="split right">
+                        <img id="mainimg" />
+                    </div>
+                </section>
+            </article>
+            <div class="space"></div>
+        </div>
+        <footer id="foot">
+            <h3>Informacje</h3>
+            <p> 
+                Autor: Adam Krizar 241276 <br> Przedmiot: Projektowanie Interfejsów Webowych: laboratorium 2 
+            </p>
+        </footer>
+    </body>
+</html>

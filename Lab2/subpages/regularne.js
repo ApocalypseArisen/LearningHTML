@@ -80,9 +80,12 @@ function validateForm()
         if (date.charAt(2) == "." && date.charAt(5) == ".")
         {            
             var frag = date.split(".")
-            console.log(frag[0]);
-            console.log(frag[1]);
-            console.log(frag[2]);
+            if(!/^[0-9]+$/.test(frag[0]) || !/^[0-9]+$/.test(frag[1]) || !/^[0-9]+$/.test(frag[2]))
+            {
+                mistake = true;
+                document.getElementById("info4").style.display = "block"
+                document.getElementById("info4").innerHTML = "Dzień/Miesiąc/Rok muszą być podane w liczbach";
+            }
         }
         else 
         {
