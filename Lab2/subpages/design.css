@@ -1,5 +1,6 @@
 /*Kolor tła*/
 body {background-color: #282828;}
+
 /* Sekcja tekstu */
 #begining, #task, #sidepanel, #foot, #tabela
 {
@@ -76,6 +77,20 @@ input
   display: none;
 }
 /*Koniec Animacja*/
+
+/*Gra*/
+#starship
+{
+  display: none;
+  position: absolute;
+  cursor: pointer;
+}
+.gamespace
+{
+    height: 600px;
+    color: #85ba3c;
+}
+/*Endgame*/
 
 /*Obrazki*/
 img

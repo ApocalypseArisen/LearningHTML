@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="pl">
     <head>
-        <script type="text/javascript" src="animation.js"></script>
+        <script type="text/javascript" src="game.js"></script>
         <meta charset="UTF-8"> 
         <link rel="stylesheet" href="design.css">
         <title>Animacja</title>
@@ -10,7 +10,7 @@
         <div class="wrap">
             <article>
                 <section id="begining">
-                    <h1><big>Własnoręcznia animacja</big></h1>
+                    <h1><big>Prosta gra zręcznościowa</big></h1>
                     <hr width="50%" style="color:#85ba3c" />
                     <div class="menu">
                         <a href="../index.html">Start</a>
@@ -18,8 +18,8 @@
                         <a href="form.html">Formularze i Java Script</a>
                         <a href="image.html">Dynamiczna zmiana obrazów</a>
                         <a href="dynamic.html">Dynamiczne podmienianie obrazów</a>
-                        <a class="current" href="animation.html">Własnoręcznia animacja</a>
-                        <a href="game.html">Prosta gra zręcznościowa</a>
+                        <a href="animation.html">Własnoręcznia animacja</a>
+                        <a class="current" href="game.html">Prosta gra zręcznościowa</a>
                     </div>
                     <hr width="50%" style="color:#85ba3c" />
                     <p></p>
@@ -27,9 +27,10 @@
             </article>
             <article>
                 <section id="task">
-                    <img id="background" src="resources/starfield.gif" />
-                    <img id="ship" src="resources/rocketship.gif" />
-                    <br><button id="start" class="potwierdz" type="button" onclick="startAnimation()">Start!</button>
+                    Zasady: Zniszcz statek Borg! Uważaj aby nie trafić Enterprise.  
+                    <button id="start" class="potwierdz" type="button" onclick="startGame()">Start!</button>
+                    <p class="gamespace" id="gamespace">0</p>
+                    <img id="starship" onclick="checkPoints()" />
                 </section>
             </article>
             <div class="space"></div>

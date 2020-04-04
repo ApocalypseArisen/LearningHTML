@@ -38,12 +38,12 @@ function animate_right(statek, i)
 
 function startAnimation()
 {
+    window.scrollTo(0, 0);
     document.getElementById("start").style.visibility = "hidden";
     statek = document.getElementById("ship");
     stars = document.getElementById("background");
     statek.style.display = "block";
     var rect = stars.getBoundingClientRect();
-    
     statek.style.left = rect.left + 1 + "px";
     statek.style.top = rect.top + 17 + "px";
     statek.style.position = "absolute";
