@@ -1,14 +1,15 @@
 <!DOCTYPE HTML>
 <html lang="pl">
     <head>
+        <script type="text/javascript" src="paint.js"></script>
         <meta charset="UTF-8"> 
         <link rel="stylesheet" href="design.css">
         <title>Edytor Graficzny</title>
     </head>
-    <body>
+    <body onload="onCreate()">
         <ul class="menu">
             <li><a href="../index.html">Start</a></li>
-            <li><a class="current" href="subpages/graphic_editor.html">Edytor Graficzny</a></li>
+            <li><a class="current" href="graphic_editor.html">Edytor Graficzny</a></li>
             <li><a href="game_storage.html">Gra</a></li>
         </ul>
         <div class="wrap">
@@ -17,12 +18,40 @@
                     <h1><big>Edytor Graficzny</big></h1>
                     <hr width="50%" style="color:#85ba3c" />
                     <p>
-                        TODO
+                        <form name="settings">
+                            <label>Szerokość: </label>
+                            <input type="text" name="width">
+                            <label>Wysokość: </label>
+                            <input type="text" name="height">
+                            <button id="bsize" class="potwierdz" type="button" onclick="createCanvas()">Utwórz</button>
+                        </form>
+                        <form name="mode" id="setup">
+                            <label>Kolor: </label>
+                            <select id="znak1">
+                                <option value="blue">Niebieski</option>
+                                <option value="green">Zielony</option>
+                                <option value="red">Czerwony</option>
+                                <option value="yellow">Zółty</option>
+                                <option value="orange">Pomarańczowy</option>
+                                <option value="black">Czarny</option>
+                                <option value="white">Biały</option>
+                            </select>
+                            <button id="bsize" class="potwierdz" type="button" onclick="createCanvas()">Rysuj</button>
+                            <button id="bsize" class="wybor" type="button" onclick="createCanvas()">Prostokąt</button>
+                            <button id="bsize" class="wybor" type="button" onclick="createCanvas()">Koło</button>
+                            <label id="checkboxlabel">
+                                Wypełnienie
+                                <input type="checkbox" id="fill" name="Wypełnienie" unchecked>
+                            </label>
+                        </form>
                     </p>
                 </secton>
             </article>
             <article>
-                <section id="editor">
+                <section id="paint">
+                    <canvas id="picture" width="300" height="300">
+                        Ta przeglądarka nie wspiera tagu HTML5 canvas
+                    </canvas>
                 </section>
             </article>
             <div class="space"></div>

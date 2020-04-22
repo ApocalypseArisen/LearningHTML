@@ -2,12 +2,12 @@
 body {background-color: #282828;}
 
 /* Sekcja tekstu */
-#begining, #task, #sidepanel, #foot, #tabela
+#begining, #paint, #sidepanel, #foot, #tabela
 {
     color:white;
     background-color:#303030;
 }
-#begining, #task, #tabela
+#begining, #paint, #tabela
 {
     text-align: center;
 }
@@ -39,7 +39,92 @@ footer, article, begining, li a, h1
 {
     font-family: "SF Pro Display";
 }
-/* Konic czcionki */
+/* Koniec czcionki */
+
+/* Menu - ustawienia */
+#setup
+{
+    display: none;
+}
+/* Koniec m-u */
+
+/*Canvas*/
+#picture
+{
+    display: none;
+    border: #85ba3c 2px solid;
+    background-color: white;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: crosshair;
+}
+/*Koniec Canvas*/
+
+/*Wprowadzanie*/
+input
+{
+    color: white;
+    background-color: #282828;
+    border: none;
+    text-align: center;
+    width: 80px;
+    margin-left: 6px;
+    margin-right: 10px;
+}
+/*Koniec Wprowadzanie*/
+
+/*Checkbox*/
+#checkboxlabel
+{
+    margin-left: 30px;
+}
+#fill
+{
+    width: 20px;
+}
+/*Koniec checkbox*/
+
+/*Comboboxy*/
+select
+{
+    color: white;
+    background-color: #282828;
+    cursor: pointer;
+    border: none;
+    width: 95px;
+    margin-right: 30px;
+    -moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none
+}
+select:hover
+{
+    background-color: #303030;
+}
+/*Koniec comboboxy*/
+
+/*Przyciski*/
+.wybor
+{
+    color: white;
+    background-color: #222222;
+    cursor: pointer;
+    border: none;
+    margin-top: 8px;
+    padding: 6px;
+}
+.potwierdz
+{
+    color: white;
+    background-color: #85ba3c;
+    cursor: pointer;
+    border: none;
+    margin-top: 8px;
+    padding: 6px;
+}
+/*Koniec Przyciski*/
 
 /* Sekcja stylu paska  */
 .menu
@@ -48,7 +133,7 @@ footer, article, begining, li a, h1
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #303030;
+    background-color: #222222;
 }
 
 li {float: left;}
@@ -64,7 +149,7 @@ li a
 
 li a:hover:not(.current) 
 {
-    background-color: #282828;
+    background-color: #303030;
 }
 
 .current
