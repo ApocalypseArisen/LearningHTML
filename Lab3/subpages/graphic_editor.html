@@ -27,7 +27,7 @@
                         </form>
                         <form name="mode" id="setup">
                             <label>Kolor: </label>
-                            <select id="znak1">
+                            <select id="colorBox">
                                 <option value="blue">Niebieski</option>
                                 <option value="green">Zielony</option>
                                 <option value="red">Czerwony</option>
@@ -36,9 +36,9 @@
                                 <option value="black">Czarny</option>
                                 <option value="white">Biały</option>
                             </select>
-                            <button id="bsize" class="potwierdz" type="button" onclick="createCanvas()">Rysuj</button>
-                            <button id="bsize" class="wybor" type="button" onclick="createCanvas()">Prostokąt</button>
-                            <button id="bsize" class="wybor" type="button" onclick="createCanvas()">Koło</button>
+                            <button id="bdraw" class="potwierdz" type="button" onclick="drawMode()">Rysuj</button>
+                            <button id="brect" class="wybor" type="button" onclick="rectMode()">Prostokąt</button>
+                            <button id="bcircle" class="wybor" type="button" onclick="circleMode()">Koło</button>
                             <label id="checkboxlabel">
                                 Wypełnienie
                                 <input type="checkbox" id="fill" name="Wypełnienie" unchecked>
@@ -49,9 +49,11 @@
             </article>
             <article>
                 <section id="paint">
+                    <div id="spacer"></div>
                     <canvas id="picture" width="300" height="300">
                         Ta przeglądarka nie wspiera tagu HTML5 canvas
                     </canvas>
+                    <canvas id="temporary" width="300" height="300"></canvas>
                 </section>
             </article>
             <div class="space"></div>
