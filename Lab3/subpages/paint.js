@@ -29,8 +29,8 @@ function onClick()
     canvas = document.getElementById("picture");
     px = cx;
     py = cy;
-    cx = event.clientX - canvas.offsetLeft;
-    cy = event.clientY - canvas.offsetTop;
+    cx = event.pageX - canvas.offsetLeft;
+    cy = event.pageY - canvas.offsetTop;
     beginx = cx;
     beginy = cy;
     clicked = true;
@@ -39,6 +39,7 @@ function onRelease()
 {
     clicked = false;
     ctx.drawImage(document.getElementById("temporary"), 0, 0);
+    ctx2.clearRect(0, 0, canvas.width, canvas.height);
 }
 
 function onMove(event)
