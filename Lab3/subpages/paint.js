@@ -1,5 +1,3 @@
-//window.onload = function() {this.onCreate()}
-
 var created = false;
 var clicked = false;
 var mode = 0;

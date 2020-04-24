@@ -2,12 +2,12 @@
 body {background-color: #282828;}
 
 /* Sekcja tekstu */
-#begining, #paint, #sidepanel, #foot, #tabela
+#begining, #paint, #sidepanel, #foot, #tabela, #game
 {
     color:white;
     background-color:#303030;
 }
-#begining, #paint, #tabela
+#begining, #paint, #tabela, #game
 {
     text-align: center;
 }
@@ -122,6 +122,47 @@ select:hover
 }
 /*Koniec comboboxy*/
 
+/*UI gry*/
+#isgame
+{
+    display: none;
+}
+/*Koniec UI gry*/
+
+/*Canvas gry*/
+#blocks
+{
+    position: absolute;
+    top: 100;
+    left: 0;
+    right: 0;
+    border: #76a733 2px solid;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: crosshair;
+}
+#ball
+{
+    position: absolute;
+    top: 100;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: crosshair;
+}
+#pallet
+{
+    position: absolute;
+    top: 100;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: crosshair;
+}
+/*Koniec cg*/
+
 /*Przyciski*/
 .wybor
 {
@@ -139,6 +180,17 @@ select:hover
     cursor: pointer;
     border: none;
     margin-top: 8px;
+    padding: 6px;
+}
+.gameButton
+{
+    color: white;
+    background-color: #85ba3c;
+    cursor: pointer;
+    border: none;
+    margin-top: 8px;
+    margin-left: 15px;
+    margin-right: 15px;
     padding: 6px;
 }
 /*Koniec Przyciski*/

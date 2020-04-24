@@ -1,28 +1,45 @@
 <!DOCTYPE HTML>
 <html lang="pl">
     <head>
+        <script type="text/javascript" src="breakout.js"></script>
         <meta charset="UTF-8"> 
         <link rel="stylesheet" href="design.css">
-        <title>Gra: </title>
+        <title>Breakout</title>
     </head>
     <body>
         <ul class="menu">
             <li><a href="../index.html">Start</a></li>
             <li><a href="graphic_editor.html">Edytor Graficzny</a></li>
-            <li><a class="current" href="game_storage.html">Gra</a></li>
+            <li><a class="current" href="game_storage.html">Breakout</a></li>
         </ul>
         <div class="wrap">
             <article>
                 <section id="begining">
-                    <h1><big>Gra: </big></h1>
+                    <h1><big>Breakout</big></h1>
                     <hr width="50%" style="color:#85ba3c" />
-                    <p>
-                        TODO
-                    </p>
+                    <div id="nogame">
+                        <h2>TOP 10:</h2>
+                        <p>
+                            Brak wyników!
+                        </p>
+                        <button id="start" class="gameButton" type="button" onclick="startGame()">Nowa Gra</button>
+                        <button id="resume" class="gameButton" type="button" onclick="">Wznów</button>
+                    </div>
+                    <div id="isgame">
+                        <button id="save" class="gameButton" type="button" onclick="">Zapisz</button>
+                        <button id="restart" class="gameButton" type="button" onclick="">Reset</button>
+                    </div>
                 </secton>
             </article>
             <article>
-                <section id="editor">
+                <section id="game">
+                    <div id="spacer">
+                        <canvas id="blocks" width="1400" height="700">
+                            Ta przeglądarka nie wspiera tagu HTML5 canvas
+                        </canvas>
+                        <canvas id="ball" width="1400" height="700"></canvas>
+                        <canvas id="pallet" width="1400" height="700"></canvas>
+                    </div>
                 </section>
             </article>
             <div class="space"></div>
