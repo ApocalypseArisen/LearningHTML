@@ -141,12 +141,14 @@ function createCanvas()
         }
         if(/^[0-9]+$/.test(height)) 
         {
+            document.getElementById("spacer").style.height = height + "px";
             canvas.height = height;
             temp.height = height;
         }
     }
     else
     {
+        document.getElementById("spacer").style.display = "block";
         document.getElementById("setup").style.display = "block";
 
         canvas = document.getElementById("picture");
@@ -160,8 +162,6 @@ function createCanvas()
         canvas.style.display = "block";
         temp.style.display = "block";
 
-        document.getElementById("spacer").style.height = height;
-
         if(/^[0-9]+$/.test(width)) 
         {
             canvas.width = width;
@@ -169,9 +169,11 @@ function createCanvas()
         }
         if(/^[0-9]+$/.test(height)) 
         {
+            document.getElementById("spacer").style.height = height + "px";
             canvas.height = height;
             temp.height = height;
         }
+        else  document.getElementById("spacer").style.height = 300 + "px";
 
         temp.addEventListener("mousemove", onMove, false);
         temp.addEventListener("mousedown", onClick, false);
