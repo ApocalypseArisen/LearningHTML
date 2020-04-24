@@ -40,9 +40,10 @@ function drawBall()
 
     ctx2.clearRect(0, 0, ball.width, ball.height);
     ctx2.beginPath();
-    ctx2.arc(xx, 100, 10, 0, 2 * Math.PI, false);
+    ctx2.arc(xx, 100, 50, 0, 2 * Math.PI, false);
     ctx2.fillStyle = "white";
     ctx2.fill();
+    ctx2.stroke();
 }
 
 function startGame()
