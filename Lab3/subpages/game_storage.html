@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="design.css">
         <title>Breakout</title>
     </head>
-    <body>
+    <body onload="onCreate()">
         <ul class="menu">
             <li><a href="../index.html">Start</a></li>
             <li><a href="graphic_editor.html">Edytor Graficzny</a></li>
@@ -75,10 +75,10 @@
                             </tr>
                         </table>
                         <button id="start" class="gameButton" type="button" onclick="startGame()">Nowa Gra</button>
-                        <button id="resume" class="gameButton" type="button" onclick="">Wznów</button>
+                        <button id="resume" class="gameButton" type="button" onclick="loadGame()">Wznów</button>
                     </div>
                     <div id="isgame">
-                        <button id="save" class="gameButton" type="button" onclick="">Zapisz</button>
+                        <button id="save" class="gameButton" type="button" onclick="saveGame()">Zapisz</button>
                         <button id="restart" class="gameButton" type="button" onclick="resetGame()">Reset</button>
                         <label class="slabel">High Score:</label> <label class="hscore" id="hscore">0</labe>
                     </div>

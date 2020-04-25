@@ -31,18 +31,43 @@ let high_score = [];
 
 points = 0;
 
-function Block(xx, yy, color, isHit)
+class SaveFile 
 {
-    this.xx = xx;
-    this.yy = yy;
-    this.color = color;
-    this.isHit = isHit;
+    constructor(red, orange, yellow, green, blue, zx, zy, palletx, cx, bx, by, points) 
+    {
+        this.red = red;
+        this.orange = orange;
+        this.yellow = yellow;
+        this.green = green;
+        this.blue = blue;
+        this.zx = zx;
+        this.zy = zy;
+        this.palletx = palletx;
+        this.cx = cx;
+        this.bx = bx;
+        this.by = by;
+        this.points = points;
+    }
 }
 
-function Score(name, points)
+class Block 
 {
-    this.name = name;
-    this.points = points;
+    constructor(xx, yy, color, isHit) 
+    {
+        this.xx = xx;
+        this.yy = yy;
+        this.color = color;
+        this.isHit = isHit;
+    }
+}
+
+class Score 
+{
+    constructor(name, points) 
+    {
+        this.name = name;
+        this.points = points;
+    }
 }
 
 function compare_score(s1, s2)
@@ -233,7 +258,7 @@ function drawBall()
     ctx2.beginPath();
     ctx2.arc(bx, by, 10, 0, 2 * Math.PI, false);
     ctx2.fillStyle = "white";
-    ctx2.strokestyle = "white"
+    ctx2.strokestyle = "white";
     ctx2.fill();
     ctx2.stroke();
 }
@@ -295,10 +320,16 @@ function addScore()
         if(high_score.length > 0)
         {
             high_score.sort(compare_score);
+            saveScore();
             displayScore();
         } 
         pressed = true;
     }
+}
+
+function saveScore()
+{
+    localStorage.setItem("hscore", JSON.stringify(high_score));
 }
 
 function displayScore()
@@ -353,6 +384,59 @@ function resetGame()
     px = 0;
     by = 670;
     startGame();
+}
+
+function saveGame()
+{
+    sf = new SaveFile(red, orange, yellow, green, blue, zx, zy, palletx, cx, bx, by, points);
+    localStorage.setItem("gsave", JSON.stringify(sf));
+    console.log("Game Saved!");
+}
+
+function loadGame()
+{
+    sf = JSON.parse(localStorage.getItem("gsave"));
+    if(high_score != null)
+    {
+        startGame();
+        red = sf.red;
+        orange = sf.orange;
+        yellow = sf.yellow;
+        green = sf.green;
+        blue = sf.blue;
+
+        zx = sf.zx;
+        zy = sf.zy;
+        palletx = sf.palletx;
+
+        cx = sf.cx;
+
+        bx = sf.bx;
+        by = sf.by;
+
+        launch = true;
+        moved = true;
+
+        points = sf.points;
+        document.getElementById("yscore").innerHTML = points;
+        if(high_score.length == 0) document.getElementById("hscore").innerHTML = points;
+        else if(high_score[0].points < points) document.getElementById("hscore").innerHTML = points;
+        
+        
+        drawPallet();
+        drawBlocks();
+        moveBall();
+    }
+}
+
+function onCreate()
+{
+    high_score = JSON.parse(localStorage.getItem("hscore"));
+    if(high_score != null)
+    {
+        if(high_score.length != 0) displayScore();
+    }
+    else high_score = [];
 }
 
 function startGame()
