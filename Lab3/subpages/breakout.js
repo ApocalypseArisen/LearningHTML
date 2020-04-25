@@ -18,6 +18,8 @@ var zx = 1;
 var zy = -1;
 
 var launch = false;
+var pressed = false;
+var moved = false;
 
 let red = [];
 let orange = [];
@@ -37,9 +39,22 @@ function Block(xx, yy, color, isHit)
     this.isHit = isHit;
 }
 
+function Score(name, points)
+{
+    this.name = name;
+    this.points = points;
+}
+
+function compare_score(s1, s2)
+{
+    if(s1.points < s2.points) return 1;
+    else if(s1.points > s2.points) return -1;
+    else return 0;
+}
+
 function onRelease() 
 {
-    if(!launch)
+    if(!launch && moved)
     {
         if(cx < px) zx = -1;
         else zx = 1;
@@ -54,6 +69,7 @@ function onMove()
     cx = event.pageX - pallet.offsetLeft;
     drawPallet();
     if(!launch) drawBall();
+    moved = true;
 }
 
 function moveBall()
@@ -97,6 +113,8 @@ function detectBlue()
             blue[i].isHit = true;
             points = points + 10;
             document.getElementById("yscore").innerHTML = points;
+            if(high_score.length == 0) document.getElementById("hscore").innerHTML = points;
+            else if(high_score[0] < points) document.getElementById("hscore").innerHTML = points;
             drawBlocks();
             if(bx == blue[i].xx || bx == (blue[i].xx + 100)) zx = -zx;
             else zy = -zy;
@@ -113,6 +131,8 @@ function detectGreen()
             green[i].isHit = true;
             points = points + 10;
             document.getElementById("yscore").innerHTML = points;
+            if(high_score.length == 0) document.getElementById("hscore").innerHTML = points;
+            else if(high_score[0] < points) document.getElementById("hscore").innerHTML = points;
             drawBlocks();
             if(bx == green[i].xx || bx == (green[i].xx + 100)) zx = -zx;
             else zy = -zy;
@@ -129,6 +149,8 @@ function detectYellow()
             yellow[i].isHit = true;
             points = points + 10;
             document.getElementById("yscore").innerHTML = points;
+            if(high_score.length == 0) document.getElementById("hscore").innerHTML = points;
+            else if(high_score[0] < points) document.getElementById("hscore").innerHTML = points;
             drawBlocks();
             if(bx == yellow[i].xx || bx == (yellow[i].xx + 100)) zx = -zx;
             else zy = -zy;
@@ -145,6 +167,8 @@ function detectOrange()
             orange[i].isHit = true;
             points = points + 10;
             document.getElementById("yscore").innerHTML = points;
+            if(high_score.length == 0) document.getElementById("hscore").innerHTML = points;
+            else if(high_score[0] < points) document.getElementById("hscore").innerHTML = points;
             drawBlocks();
             if(bx == orange[i].xx || bx == (orange[i].xx + 100)) zx = -zx;
             else zy = -zy;
@@ -161,6 +185,8 @@ function detectRed()
             red[i].isHit = true;
             points = points + 10;
             document.getElementById("yscore").innerHTML = points;
+            if(high_score.length == 0) document.getElementById("hscore").innerHTML = points;
+            else if(high_score[0] < points) document.getElementById("hscore").innerHTML = points;
             drawBlocks();
             if(bx == red[i].xx || bx == (red[i].xx + 100)) zx = -zx;
             else zy = -zy;
@@ -253,15 +279,37 @@ function createBlocks()
 
 function addScore()
 {
-    if(high_score.length >= 10) 
+    if(!pressed)
     {
-        if(high_score[9] < points)
+        if(high_score.length >= 10) 
         {
-            high_score.pop();
-            high_score.push(points);
+            if(high_score[9].points < points)
+            {
+                console.log(high_score.length)
+                high_score.pop();
+                console.log(high_score.length)
+                high_score.push(new Score((document.forms["endgame"]["name"].value + ":"), points));
+            }
         }
+        else high_score.push(new Score((document.forms["endgame"]["name"].value + ":"), points));
+        if(high_score.length > 0)
+        {
+            high_score.sort(compare_score);
+            displayScore();
+        } 
+        pressed = true;
     }
-    high_score.push(points);
+}
+
+function displayScore()
+{
+    document.getElementById("pscore").style.display = "none";
+    for(let i=0; i<high_score.length; i++)
+    {
+        document.getElementById("tr" + i).style.display = "block";
+        document.getElementById("player" + i).innerHTML = high_score[i].name;
+        document.getElementById("score" + i).innerHTML = high_score[i].points;
+    }
 }
 
 function drawBlock(src)
@@ -297,9 +345,22 @@ function drawBlocks()
     }
 }
 
+function resetGame()
+{
+    launch = false;
+    bx = 0;
+    cx = 0;
+    px = 0;
+    by = 670;
+    startGame();
+}
+
 function startGame()
 {
     createBlocks();
+
+    pressed = false;
+    moved = false;
 
     points = 0;
     document.getElementById("yscore").innerHTML = points;
@@ -323,4 +384,7 @@ function startGame()
     pallet.addEventListener("mouseup", onRelease, false);
 
     drawBlocks();
+
+    if(high_score.length != 0) document.getElementById("hscore").innerHTML = high_score[0].points;
+    else document.getElementById("hscore").innerHTML = 0;
 }

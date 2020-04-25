@@ -19,15 +19,67 @@
                     <hr width="50%" style="color:#85ba3c" />
                     <div id="nogame">
                         <h2>TOP 10:</h2>
-                        <p>
+                        <p id="pscore">
                             Brak wyników!
                         </p>
+                        <table align="center">
+                            <tr id="tr0">
+                                <td><b>1.</b></td>
+                                <td id="player0"></td>
+                                <td id="score0"></td>
+                            </tr>
+                            <tr id="tr1">
+                                <td><b>2.</b></td>
+                                <td id="player1"></td>
+                                <td id="score1"></td>
+                            </tr>
+                            <tr id="tr2">
+                                <td><b>3.</b></td>
+                                <td id="player2"></td>
+                                <td id="score2"></td>
+                            </tr>
+                            <tr id="tr3">
+                                <td>4.</td>
+                                <td id="player3"></td>
+                                <td id="score3"></td>
+                            </tr>
+                            <tr id="tr4">
+                                <td>5.</td>
+                                <td id="player4"></td>
+                                <td id="score4"></td>
+                            </tr>
+                            <tr id="tr5"> 
+                                <td>6.</td>
+                                <td id="player5"></td>
+                                <td id="score5"></td>
+                            </tr>
+                            <tr id="tr6">
+                                <td>7.</td>
+                                <td id="player6"></td>
+                                <td id="score6"></td>
+                            </tr>
+                            <tr id="tr7">
+                                <td>8.</td>
+                                <td id="player7"></td>
+                                <td id="score7"></td>
+                            </tr>
+                            <tr id="tr8">
+                                <td>9.</td>
+                                <td id="player8"></td>
+                                <td id="score8"></td>
+                            </tr>
+                            <tr id="tr9">
+                                <td>10.</td>
+                                <td id="player9"></td>
+                                <td id="score9"></td>
+                            </tr>
+                        </table>
                         <button id="start" class="gameButton" type="button" onclick="startGame()">Nowa Gra</button>
                         <button id="resume" class="gameButton" type="button" onclick="">Wznów</button>
                     </div>
                     <div id="isgame">
                         <button id="save" class="gameButton" type="button" onclick="">Zapisz</button>
-                        <button id="restart" class="gameButton" type="button" onclick="">Reset</button>
+                        <button id="restart" class="gameButton" type="button" onclick="resetGame()">Reset</button>
                         <label class="slabel">High Score:</label> <label class="hscore" id="hscore">0</labe>
                     </div>
                 </secton>
@@ -47,8 +99,8 @@
                         <label>Twój wynik: </label> <label id="mscore">0</label>
                         <form name="endgame"> 
                             <label>Name: </label>
-                            <input type="text" name="width" value="Player">
-                            <button id="save_name" class="potwierdz" type="button" onclick="">Zapisz</button>
+                            <input type="text" name="name" value="Player">
+                            <button id="save_name" class="potwierdz" type="button" onclick="addScore()">Zapisz</button>
                         </form>
                     </div>
                 </section>

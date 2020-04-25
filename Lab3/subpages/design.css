@@ -141,6 +141,13 @@ select:hover
 }
 /*Koniec UI gry*/
 
+/*tabela*/
+#tr0, #tr1, #tr2, #tr3, #tr4, #tr5, #tr6, #tr7, #tr8, #tr9
+{
+    display: none;
+}
+/*koniec tabela*/
+
 /*Canvas gry*/
 #blocks
 {
