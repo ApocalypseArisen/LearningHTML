@@ -19,6 +19,20 @@ var zy = -1;
 
 var launch = false;
 
+let red = [];
+let orange = [];
+let yellow = [];
+let green = [];
+let blue = [];
+
+function Block(xx, yy, color, isHit)
+{
+    this.xx = xx;
+    this.yy = yy;
+    this.color = color;
+    this.isHit = isHit;
+}
+
 function onRelease() 
 {
     if(!launch)
@@ -107,8 +121,77 @@ function drawBall()
     ctx2.stroke();
 }
 
+function createBlocks()
+{
+    xx = 165;
+    for(let i=0; i<10; i++) 
+    {        
+        red.push(new Block(xx, 30, "red", false));
+        xx = xx + 120;
+    }
+    xx = 20;
+    for(let i=0; i<11; i++) 
+    {
+        orange.push(new Block(xx, 70, "orange", false));
+        xx = xx + 120;
+    }
+    xx = 165;
+    for(let i=0; i<10; i++) 
+    {
+        yellow.push(new Block(xx, 110, "yellow", false));
+        xx = xx + 120;
+    }
+    xx = 10;
+    for(let i=0; i<11; i++) 
+    {
+        green.push(new Block(xx, 150, "green", false));
+        xx = xx + 120;
+    }
+    xx = 165;
+    for(let i=0; i<10; i++) 
+    {
+        blue.push(new Block(xx, 190, "blue", false));
+        xx = xx + 120;
+    }
+}
+
+function drawBlock(src)
+{
+    ctx3.beginPath();
+    ctx3.fillRect(src.xx, src.yy, 100, 30);
+    ctx3.fillStyle = src.color;
+    ctx3.stroke();
+}
+
+function drawBlocks()
+{
+    ctx3.clearRect(0, 0, blocks.width, blocks.height);
+    for(let i=0; i<10; i++) 
+    {
+        if(!red[i].isHit) drawBlock(red[i])
+    }
+    for(let i=0; i<11; i++) 
+    {
+        if(!orange[i].isHit) drawBlock(orange[i])
+    }
+    for(let i=0; i<10; i++) 
+    {
+        if(!yellow[i].isHit) drawBlock(yellow[i])
+    }
+    for(let i=0; i<11; i++) 
+    {
+        if(!green[i].isHit) drawBlock(green[i])
+    }
+    for(let i=0; i<10; i++) 
+    {
+        if(!blue[i].isHit) drawBlock(blue[i])
+    }
+}
+
 function startGame()
 {
+    createBlocks();
+
     document.getElementById("spacer").style.display = "block";
     document.getElementById("isgame").style.display = "block";
     document.getElementById("nogame").style.display = "none";
@@ -126,4 +209,6 @@ function startGame()
 
     pallet.addEventListener("mousemove", onMove, false);
     pallet.addEventListener("mouseup", onRelease, false);
+
+    drawBlocks();
 }
