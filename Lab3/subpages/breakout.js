@@ -114,7 +114,7 @@ function detectBlue()
             points = points + 10;
             document.getElementById("yscore").innerHTML = points;
             if(high_score.length == 0) document.getElementById("hscore").innerHTML = points;
-            else if(high_score[0] < points) document.getElementById("hscore").innerHTML = points;
+            else if(high_score[0].points < points) document.getElementById("hscore").innerHTML = points;
             drawBlocks();
             if(bx == blue[i].xx || bx == (blue[i].xx + 100)) zx = -zx;
             else zy = -zy;
@@ -132,7 +132,7 @@ function detectGreen()
             points = points + 10;
             document.getElementById("yscore").innerHTML = points;
             if(high_score.length == 0) document.getElementById("hscore").innerHTML = points;
-            else if(high_score[0] < points) document.getElementById("hscore").innerHTML = points;
+            else if(high_score[0].points < points) document.getElementById("hscore").innerHTML = points;
             drawBlocks();
             if(bx == green[i].xx || bx == (green[i].xx + 100)) zx = -zx;
             else zy = -zy;
@@ -150,7 +150,7 @@ function detectYellow()
             points = points + 10;
             document.getElementById("yscore").innerHTML = points;
             if(high_score.length == 0) document.getElementById("hscore").innerHTML = points;
-            else if(high_score[0] < points) document.getElementById("hscore").innerHTML = points;
+            else if(high_score[0].points < points) document.getElementById("hscore").innerHTML = points;
             drawBlocks();
             if(bx == yellow[i].xx || bx == (yellow[i].xx + 100)) zx = -zx;
             else zy = -zy;
@@ -168,7 +168,7 @@ function detectOrange()
             points = points + 10;
             document.getElementById("yscore").innerHTML = points;
             if(high_score.length == 0) document.getElementById("hscore").innerHTML = points;
-            else if(high_score[0] < points) document.getElementById("hscore").innerHTML = points;
+            else if(high_score[0].points < points) document.getElementById("hscore").innerHTML = points;
             drawBlocks();
             if(bx == orange[i].xx || bx == (orange[i].xx + 100)) zx = -zx;
             else zy = -zy;
@@ -186,7 +186,7 @@ function detectRed()
             points = points + 10;
             document.getElementById("yscore").innerHTML = points;
             if(high_score.length == 0) document.getElementById("hscore").innerHTML = points;
-            else if(high_score[0] < points) document.getElementById("hscore").innerHTML = points;
+            else if(high_score[0].points < points) document.getElementById("hscore").innerHTML = points;
             drawBlocks();
             if(bx == red[i].xx || bx == (red[i].xx + 100)) zx = -zx;
             else zy = -zy;
