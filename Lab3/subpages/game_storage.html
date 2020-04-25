@@ -28,6 +28,7 @@
                     <div id="isgame">
                         <button id="save" class="gameButton" type="button" onclick="">Zapisz</button>
                         <button id="restart" class="gameButton" type="button" onclick="">Reset</button>
+                        <label class="slabel">High Score:</label> <label class="hscore" id="hscore">0</labe>
                     </div>
                 </secton>
             </article>
@@ -39,6 +40,16 @@
                         </canvas>
                         <canvas id="ball" width="1400" height="700"></canvas>
                         <canvas id="pallet" width="1400" height="700"></canvas>
+                        <label>Twój wynik: </label> <label id="yscore">0</label>
+                    </div>
+                    <div id="lost">
+                        <h1 class="end"><big>Koniec gry</big></h1>
+                        <label>Twój wynik: </label> <label id="yscore">0</label>
+                        <form name="endgame"> 
+                            <label>Name: </label>
+                            <input type="text" name="width" value="Player">
+                            <button id="save_name" class="potwierdz" type="button" onclick="">Zapisz</button>
+                        </form>
                     </div>
                 </section>
             </article>

@@ -127,6 +127,18 @@ select:hover
 {
     display: none;
 }
+.slabel
+{
+    margin-left: 200px;
+}
+.end
+{
+    color: red;
+}
+#lost
+{
+    display: none;
+}
 /*Koniec UI gry*/
 
 /*Canvas gry*/
