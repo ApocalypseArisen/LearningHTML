@@ -29,11 +29,13 @@ let blue = [];
 
 let high_score = [];
 
+var destroyed = 0;
+
 points = 0;
 
 class SaveFile 
 {
-    constructor(red, orange, yellow, green, blue, zx, zy, palletx, cx, bx, by, points) 
+    constructor(red, orange, yellow, green, blue, zx, zy, palletx, cx, bx, by, points, destroyed) 
     {
         this.red = red;
         this.orange = orange;
@@ -47,6 +49,7 @@ class SaveFile
         this.bx = bx;
         this.by = by;
         this.points = points;
+        this.destroyed = destroyed;
     }
 }
 
@@ -126,7 +129,14 @@ function moveBall()
         {
             moveBall();
         }
+        if(destroyed == 52) nextLevel();
     }, 1)
+}
+
+function nextLevel()
+{
+    createBlocks();
+    drawBlocks();
 }
 
 function detectBlue()
@@ -143,6 +153,7 @@ function detectBlue()
             drawBlocks();
             if(bx == blue[i].xx || bx == (blue[i].xx + 100)) zx = -zx;
             else zy = -zy;
+            destroyed = destroyed + 1;
         }
     }
 }
@@ -161,6 +172,7 @@ function detectGreen()
             drawBlocks();
             if(bx == green[i].xx || bx == (green[i].xx + 100)) zx = -zx;
             else zy = -zy;
+            destroyed = destroyed + 1;
         }
     }
 }
@@ -179,6 +191,7 @@ function detectYellow()
             drawBlocks();
             if(bx == yellow[i].xx || bx == (yellow[i].xx + 100)) zx = -zx;
             else zy = -zy;
+            destroyed = destroyed + 1;
         }
     }
 }
@@ -197,6 +210,7 @@ function detectOrange()
             drawBlocks();
             if(bx == orange[i].xx || bx == (orange[i].xx + 100)) zx = -zx;
             else zy = -zy;
+            destroyed = destroyed + 1;
         }
     }
 }
@@ -215,6 +229,7 @@ function detectRed()
             drawBlocks();
             if(bx == red[i].xx || bx == (red[i].xx + 100)) zx = -zx;
             else zy = -zy;
+            destroyed = destroyed + 1;
         }
     }
 }
@@ -388,9 +403,8 @@ function resetGame()
 
 function saveGame()
 {
-    sf = new SaveFile(red, orange, yellow, green, blue, zx, zy, palletx, cx, bx, by, points);
+    sf = new SaveFile(red, orange, yellow, green, blue, zx, zy, palletx, cx, bx, by, points, destroyed);
     localStorage.setItem("gsave", JSON.stringify(sf));
-    console.log("Game Saved!");
 }
 
 function loadGame()
@@ -399,6 +413,8 @@ function loadGame()
     if(high_score != null)
     {
         startGame();
+        destroyed = sf.destroyed;
+
         red = sf.red;
         orange = sf.orange;
         yellow = sf.yellow;
