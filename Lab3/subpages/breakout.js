@@ -25,6 +25,10 @@ let yellow = [];
 let green = [];
 let blue = [];
 
+let high_score = [];
+
+points = 0;
+
 function Block(xx, yy, color, isHit)
 {
     this.xx = xx;
@@ -61,6 +65,12 @@ function moveBall()
 
         if(by <= 5) zy = -zy;
 
+        if(by < 225 && by  > 185) detectBlue();
+        if(by < 175 && by  > 145) detectGreen();
+        if(by < 135 && by  > 105) detectYellow();
+        if(by < 95 && by  > 65) detectOrange();
+        if(by < 55 && by  > 25) detectRed();
+
         if(by == 675)
         {
             if(bx > palletx && bx < (palletx + 150)) zy = -zy;
@@ -78,6 +88,86 @@ function moveBall()
     }, 1)
 }
 
+function detectBlue()
+{
+    for(let i=0; i<10; i++)
+    {
+        if(bx >= blue[i].xx && bx <= (blue[i].xx + 100) && !blue[i].isHit)
+        {
+            blue[i].isHit = true;
+            points = points + 10;
+            document.getElementById("yscore").innerHTML = points;
+            drawBlocks();
+            if(bx == blue[i].xx || bx == (blue[i].xx + 100)) zx = -zx;
+            else zy = -zy;
+        }
+    }
+}
+
+function detectGreen()
+{
+    for(let i=0; i<11; i++)
+    {
+        if(bx >= green[i].xx && bx <= (green[i].xx + 100) && !green[i].isHit)
+        {
+            green[i].isHit = true;
+            points = points + 10;
+            document.getElementById("yscore").innerHTML = points;
+            drawBlocks();
+            if(bx == green[i].xx || bx == (green[i].xx + 100)) zx = -zx;
+            else zy = -zy;
+        }
+    }
+}
+
+function detectYellow()
+{
+    for(let i=0; i<10; i++)
+    {
+        if(bx >= yellow[i].xx && bx <= (yellow[i].xx + 100) && !yellow[i].isHit)
+        {
+            yellow[i].isHit = true;
+            points = points + 10;
+            document.getElementById("yscore").innerHTML = points;
+            drawBlocks();
+            if(bx == yellow[i].xx || bx == (yellow[i].xx + 100)) zx = -zx;
+            else zy = -zy;
+        }
+    }
+}
+
+function detectOrange()
+{
+    for(let i=0; i<11; i++)
+    {
+        if(bx >= orange[i].xx && bx <= (orange[i].xx + 100) && !orange[i].isHit)
+        {
+            orange[i].isHit = true;
+            points = points + 10;
+            document.getElementById("yscore").innerHTML = points;
+            drawBlocks();
+            if(bx == orange[i].xx || bx == (orange[i].xx + 100)) zx = -zx;
+            else zy = -zy;
+        }
+    }
+}
+
+function detectRed()
+{
+    for(let i=0; i<10; i++)
+    {
+        if(bx >= red[i].xx && bx <= (red[i].xx + 100) && !red[i].isHit)
+        {
+            red[i].isHit = true;
+            points = points + 10;
+            document.getElementById("yscore").innerHTML = points;
+            drawBlocks();
+            if(bx == red[i].xx || bx == (red[i].xx + 100)) zx = -zx;
+            else zy = -zy;
+        }
+    }
+}
+
 function endGame()
 {
     launch = false;
@@ -85,6 +175,7 @@ function endGame()
     document.getElementById("isgame").style.display = "none";
     document.getElementById("nogame").style.display = "block";
     document.getElementById("lost").style.display = "block";
+    document.getElementById("mscore").innerHTML = points;
     by = 670;
 }
 
@@ -98,8 +189,8 @@ function drawPallet()
 
     ctx.clearRect(0, 0, pallet.width, pallet.height);
     ctx.beginPath();
-    ctx.fillRect(xx, 680, 150, 20);
     ctx.fillStyle = "#0088ff";
+    ctx.fillRect(xx, 680, 150, 20);
     ctx.stroke();
 }
 
@@ -123,31 +214,36 @@ function drawBall()
 
 function createBlocks()
 {
-    xx = 165;
+    xx = 110;
+    red = [];
     for(let i=0; i<10; i++) 
     {        
         red.push(new Block(xx, 30, "red", false));
         xx = xx + 120;
     }
-    xx = 20;
+    xx = 50;
+    orange = [];
     for(let i=0; i<11; i++) 
     {
         orange.push(new Block(xx, 70, "orange", false));
         xx = xx + 120;
     }
-    xx = 165;
+    xx = 110;
+    yellow = [];
     for(let i=0; i<10; i++) 
     {
         yellow.push(new Block(xx, 110, "yellow", false));
         xx = xx + 120;
     }
-    xx = 10;
+    xx = 50;
+    green = [];
     for(let i=0; i<11; i++) 
     {
         green.push(new Block(xx, 150, "green", false));
         xx = xx + 120;
     }
-    xx = 165;
+    xx = 110;
+    blue = [];
     for(let i=0; i<10; i++) 
     {
         blue.push(new Block(xx, 190, "blue", false));
@@ -155,11 +251,24 @@ function createBlocks()
     }
 }
 
+function addScore()
+{
+    if(high_score.length >= 10) 
+    {
+        if(high_score[9] < points)
+        {
+            high_score.pop();
+            high_score.push(points);
+        }
+    }
+    high_score.push(points);
+}
+
 function drawBlock(src)
 {
     ctx3.beginPath();
-    ctx3.fillRect(src.xx, src.yy, 100, 30);
     ctx3.fillStyle = src.color;
+    ctx3.fillRect(src.xx, src.yy, 100, 30);
     ctx3.stroke();
 }
 
@@ -168,29 +277,32 @@ function drawBlocks()
     ctx3.clearRect(0, 0, blocks.width, blocks.height);
     for(let i=0; i<10; i++) 
     {
-        if(!red[i].isHit) drawBlock(red[i])
+        if(!red[i].isHit) drawBlock(red[i]);
     }
     for(let i=0; i<11; i++) 
     {
-        if(!orange[i].isHit) drawBlock(orange[i])
+        if(!orange[i].isHit) drawBlock(orange[i]);
     }
     for(let i=0; i<10; i++) 
     {
-        if(!yellow[i].isHit) drawBlock(yellow[i])
+        if(!yellow[i].isHit) drawBlock(yellow[i]);
     }
     for(let i=0; i<11; i++) 
     {
-        if(!green[i].isHit) drawBlock(green[i])
+        if(!green[i].isHit) drawBlock(green[i]);
     }
     for(let i=0; i<10; i++) 
     {
-        if(!blue[i].isHit) drawBlock(blue[i])
+        if(!blue[i].isHit) drawBlock(blue[i]);
     }
 }
 
 function startGame()
 {
     createBlocks();
+
+    points = 0;
+    document.getElementById("yscore").innerHTML = points;
 
     document.getElementById("spacer").style.display = "block";
     document.getElementById("isgame").style.display = "block";
