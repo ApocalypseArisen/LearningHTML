@@ -1,0 +1,104 @@
+/*Kolor tła*/
+body {background-color: #282828;}
+
+/* Sekcja tekstu */
+#begining, #paint, #sidepanel, #foot, #tabela, #game
+{
+    color:white;
+    background-color:#303030;
+}
+#begining, #paint, #tabela, #game
+{
+    text-align: center;
+}
+::selection 
+{
+    color: white;
+    background: #85ba3c;
+}
+/* Koniec sekcji tekstu*/
+
+/* Padding (Granice tekstu)*/
+#begining
+{
+    padding-top: 3px;
+    padding-bottom: 10px;
+}
+/* Koniec Padding */
+
+/* Czcionki */
+a
+{
+    color: #85ba3c;
+}
+h1
+{
+    font-size: xx-large;
+}
+footer, article, begining, li a, h1
+{
+    font-family: "SF Pro Display";
+}
+/* Koniec czcionki */
+
+/*Wprowadzanie*/
+input
+{
+    color: white;
+    background-color: #282828;
+    border: none;
+    text-align: center;
+    width: 80px;
+    margin-left: 6px;
+    margin-right: 10px;
+}
+/*Koniec Wprowadzanie*/
+
+
+/* Sekcja stylu paska  */
+.menu
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #222222;
+}
+
+li {float: left;}
+
+li a 
+{
+    color: white;
+    display: block;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+li a:hover:not(.current) 
+{
+    background-color: #303030;
+}
+
+.current
+{
+    background-color: #85ba3c;
+}
+/* Koniec sekcji stylu paska */
+
+/* Układ strony */
+html, body
+{
+    height: 100%;
+}
+.wrap
+{
+    min-height: 100%;
+    margin-bottom: -60px;
+}
+.foot, .space
+{
+    height: 60px;
+}
+/* Koniec układ strony */
