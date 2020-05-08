@@ -2,12 +2,12 @@
 body {background-color: #282828;}
 
 /* Sekcja tekstu */
-#begining, #paint, #sidepanel, #foot, #tabela, #game
+#begining, #foot, #tabela, #simulation
 {
     color:white;
     background-color:#303030;
 }
-#begining, #paint, #tabela, #game
+#begining, #tabela, #simulation
 {
     text-align: center;
 }
@@ -54,6 +54,62 @@ input
 }
 /*Koniec Wprowadzanie*/
 
+/*Comboboxy*/
+select
+{
+    color: white;
+    background-color: #282828;
+    cursor: pointer;
+    border: none;
+    width: 25px;
+    text-align: center;
+    -moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none
+}
+select:hover
+{
+    background-color: #303030;
+}
+/*Koniec comboboxy*/
+
+/*Menu Symulacji*/
+#siminfo
+{
+    display: none;
+}
+#negative
+{
+    color: red;
+}
+#total
+{
+    color: #85ba3c;
+}
+#max, #total
+{
+    padding-right: 140px;
+}
+/*Koniec M-symulacji*/
+
+/*Pole symulacji*/
+#simulation
+{
+    display: none;
+}
+/*End polesymulacji*/
+
+/*Przyciski*/
+.buttons
+{
+    color: white;
+    background-color: #85ba3c;
+    cursor: pointer;
+    border: none;
+    margin-top: 8px;
+    padding: 6px;
+}
+/*Koniec Przyciski*/
 
 /* Sekcja stylu paska  */
 .menu

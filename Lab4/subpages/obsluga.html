@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="pl">
     <head>
+        <script type="text/javascript" src="obsluga.js"></script>
         <meta charset="UTF-8"> 
         <link rel="stylesheet" href="design.css">
         <title>PIW Lab 4</title>
@@ -17,9 +18,34 @@
                     <h1 align="center"><big>Symulacja punktu obsługi</big></h1>
                     <hr width="50%" style="color:#85ba3c" />
                     <p>
-                        TODO
+                        <div id="setup">
+                            Długość kolejki: 
+                            <select id="limitBox">
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>
+                                <option value="25">25</option>
+                                <option value="30">30</option>
+                                <option value="35">35</option>
+                                <option value="40">40</option>
+                            </select>
+                            <br><button id="bsim" class="buttons" type="button" onclick="beginSimulation()">Rozpocznij</button>
+                        </div>
+                        <div id="siminfo">
+                            <label class="info">Obsłużonych: </label>
+                            <label id="total">0</label>
+                            <label class="info">W kolejce: </label>
+                            <label id="present">0</label>
+                            <label>/</label>
+                            <label id="maximum">10</label>
+                            <label class="info">Odrzuconych: </label>
+                            <label id="negative">0</label>
+                        </div>
                     </p>
                 </secton>
+                <section id="simulation">
+                    TODO
+                </section>
             </article>
             <div class="space"></div>
         </div>
