@@ -68,16 +68,18 @@ function caseTaken(event)
     switch(choice)
     {
         case 1: clerkABar(petent.time, petent); break;
-        case 2: clerkBBar(petent.time); break;
-        case 3: clerkCBar(petent.time); break;
+        case 2: clerkBBar(petent.time, petent); break;
+        case 3: clerkCBar(petent.time, petent); break;
     }
 }
 
 function updateList()
 {
-    for(let i = 0; i < list.length(); i++)
+    for(let i = 0; i < current; i++)
     {
-        lits[i].thread.postMessage([clerks, i]);
+        list[i].thread.postMessage([i]);
+        console.log("UPDATE: " + current);
+        line.rows[i].cells[0] = "TEST";
     }
 }
 
@@ -102,10 +104,34 @@ function newPetent(event)
     generatorBar((event.data.time * 10)); 
 }
 
-function clerkAfinish(event)
+function clerkFinish(event)
 {
-    document.getElementById("Alabel").innerHTML = "jest wolny"; 
-    clerks[0] = true;
+    var opis;
+    var numb = 0;
+    console.log(event.data.id);
+    switch(event.data.id)
+    {
+        case "A": 
+        {
+            opis = document.getElementById("Alabel")
+            numb = 0;
+        } break;
+        case "B": 
+        {
+            opis = document.getElementById("Blabel")
+            numb = 1;
+        } break;
+        case "C": 
+        {
+            opis = document.getElementById("Clabel")
+            numb = 2;
+        } break;
+    }
+    opis.innerHTML = "jest wolny"; 
+    clerks[opis] = true;
+    updateList();
+    petents++;
+    totalPetents.innerHTML = petents;
 }
 
 function clerkABar(time, petent)
@@ -113,7 +139,7 @@ function clerkABar(time, petent)
     var bar = document.getElementById("ABar");
     document.getElementById("Alabel").innerHTML = "obsługuje klienta nr. " + petent.number;
     var index = 0;
-    clerkA.postMessage(time);
+    clerkA.postMessage([time , "A"]);
     var interval = setInterval(moveBar, time);
     function moveBar()
     {
@@ -132,10 +158,12 @@ function clerkABar(time, petent)
     }
 }
 
-function clerkBBar(time)
+function clerkBBar(time, petent)
 {
-    var index = 0;
     var bar = document.getElementById("BBar");
+    document.getElementById("Blabel").innerHTML = "obsługuje klienta nr. " + petent.number;
+    var index = 0;
+    clerkB.postMessage([time, "B"]);
     var interval = setInterval(moveBar, time);
     function moveBar()
     {
@@ -144,14 +172,22 @@ function clerkBBar(time)
         {   bar.innerHTML = index + "%"
             bar.style.width = index + "%";
         }
-        else clearInterval(interval);
+        else 
+        {
+            bar.innerHTML = "";
+            bar.style.width = "0%";
+            clearInterval(interval);
+            petent.thread.terminate();
+        }
     }
 }
 
-function clerkCBar(time)
+function clerkCBar(time, petent)
 {
-    var index = 0;
     var bar = document.getElementById("CBar");
+    document.getElementById("Clabel").innerHTML = "obsługuje klienta nr. " + petent.number;
+    var index = 0;
+    clerkC.postMessage([time, "C"]);
     var interval = setInterval(moveBar, time);
     function moveBar()
     {
@@ -160,7 +196,13 @@ function clerkCBar(time)
         {   bar.innerHTML = index + "%"
             bar.style.width = index + "%";
         }
-        else clearInterval(interval);
+        else 
+        {
+            bar.innerHTML = "";
+            bar.style.width = "0%";
+            clearInterval(interval);
+            petent.thread.terminate();
+        }
     }
 }
 
@@ -213,9 +255,11 @@ function beginSimulation()
     if(typeof(Worker) !== "undefined")
     {
         clerkA = new Worker("clerk.js");
-        clerkA.onmessage = function(event) { clerkAfinish(event); }
+        clerkA.onmessage = function(event) { clerkFinish(event); }
         clerkB = new Worker("clerk.js");
+        clerkB.onmessage = function(event) { clerkFinish(event); }
         clerkC = new Worker("clerk.js");
+        clerkC.onmessage = function(event) { clerkFinish(event); }
     }
     else
     {

@@ -3,7 +3,7 @@ var petent_time;
 
 function mainloop()
 {
-    time = Math.floor((Math.random() * 20));
+    time = Math.floor((Math.random() * 20) + 5);
     petent_time = Math.floor((Math.random() * 10) + 25);
 
     postMessage({pt:petent_time, time:time});
