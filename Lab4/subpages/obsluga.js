@@ -161,8 +161,11 @@ function clerkABar(time, petent)
         }
         else 
         {
-            bar.innerHTML = "";
-            bar.style.width = "0%";
+            if(index == 101) 
+            {
+                bar.innerHTML = "";
+                bar.style.width = "0%";
+            }
             clearInterval(interval);
             petent.thread.terminate();
         }
@@ -185,8 +188,11 @@ function clerkBBar(time, petent)
         }
         else 
         {
-            bar.innerHTML = "";
-            bar.style.width = "0%";
+            if(index == 101) 
+            {
+                bar.innerHTML = "";
+                bar.style.width = "0%";
+            }
             clearInterval(interval);
             petent.thread.terminate();
         }
@@ -209,8 +215,11 @@ function clerkCBar(time, petent)
         }
         else 
         {
-            bar.innerHTML = "";
-            bar.style.width = "0%";
+            if(index == 101)
+            {   
+                bar.innerHTML = "";
+                bar.style.width = "0%";
+            }
             clearInterval(interval);
             petent.thread.terminate();
         }
@@ -229,7 +238,15 @@ function generatorBar(time)
         {   bar.innerHTML = index + "%"
             bar.style.width = index + "%";
         }
-        else clearInterval(interval);
+        else 
+        {
+            if(index == 101) 
+            {
+                bar.innerHTML = "";
+                bar.style.width = "0%";
+            }
+            clearInterval(interval);
+        }
     }
 }
 
@@ -299,6 +316,38 @@ function stopSimulation()
 
         stoped = true;
     }
-    else beginSimulation();
+    else 
+    {
+        document.getElementById("ssim").innerHTML = "Stop";
+        stoped = false;
+        for(let i = 0; i < current; i++)
+        {
+            line.deleteRow(1);
+        }
+        document.getElementById("ABar").innerHTML = "";
+        document.getElementById("BBar").innerHTML = "";
+        document.getElementById("CBar").innerHTML = "";
+        document.getElementById("genBar").innerHTML = "";
+
+        document.getElementById("ABar").style.width = "0%";
+        document.getElementById("BBar").style.width = "0%";
+        document.getElementById("CBar").style.width = "0%";
+        document.getElementById("genBar").style.width = "0%";
+
+        document.getElementById("Alabel").innerHTML = "jest wolny";
+        document.getElementById("Blabel").innerHTML = "jest wolny";
+        document.getElementById("Clabel").innerHTML = "jest wolny";
+
+        document.getElementById("result").innerHTML = "";
+
+        list = [];
+        petents = 0;
+        declined = 0;
+        current = 0;
+        totalNumb = 0;
+        clerks = [true, true, true];
+
+        beginSimulation();
+    }
 }
 
