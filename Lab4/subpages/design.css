@@ -2,12 +2,12 @@
 body {background-color: #282828;}
 
 /* Sekcja tekstu */
-#begining, #foot, #simulation
+#begining, #foot, #simulation, #infoBar
 {
     color:white;
     background-color:#303030;
 }
-#begining, #tabela, #simulation
+#begining, #tabela, #simulation, #infoBar
 {
     text-align: center;
 }
@@ -136,7 +136,34 @@ select:hover
     margin-top: 8px;
     padding: 6px;
 }
+#bcontainer
+{
+    text-align: center;
+    display: none;
+}
 /*Koniec Przyciski*/
+
+/*Paski postępu*/
+#infoBar 
+{
+    display: none;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+#pbar1
+{
+    width: 40%;
+    background-color: #282828;
+    margin: 0 auto;
+}
+#genBar
+{
+    width: 0%;
+    height: 30px;
+    background-color: #85ba3c;
+    margin: 0 auto;
+}
+/*Koniec paski postępu*/
 
 /* Sekcja stylu paska  */
 .menu
