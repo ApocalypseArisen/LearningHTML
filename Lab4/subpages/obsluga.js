@@ -128,7 +128,7 @@ function clerkFinish(event)
         } break;
     }
     opis.innerHTML = "jest wolny"; 
-    clerks[opis] = true;
+    clerks[numb] = true;
     updateList();
     petents++;
     totalPetents.innerHTML = petents;
