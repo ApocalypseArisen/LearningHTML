@@ -3,8 +3,8 @@ var petent_time;
 
 function mainloop()
 {
-    time = Math.floor((Math.random() * 40) + 10);
-    petent_time = Math.floor((Math.random() * 20) + 5);
+    time = Math.floor((Math.random() * 20));
+    petent_time = Math.floor((Math.random() * 10) + 25);
 
     postMessage({pt:petent_time, time:time});
     setTimeout("mainloop()", (time * 1000));

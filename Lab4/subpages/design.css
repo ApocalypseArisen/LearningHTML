@@ -60,6 +60,7 @@ table, td, th
     border: 1px solid #85ba3c;
     text-align: center;
     border-collapse: collapse;
+    margin: 0 auto;
 }
 th, td
 {
@@ -124,6 +125,10 @@ select:hover
 {
     display: none;
 }
+.clerk_wrapper
+{
+    margin: 0 auto;
+}
 /*End polesymulacji*/
 
 /*Przyciski*/
@@ -156,7 +161,7 @@ select:hover
     background-color: #282828;
     margin: 0 auto;
 }
-#genBar
+#genBar, #ABar, #BBar, #CBar
 {
     width: 0%;
     height: 30px;
