@@ -65,6 +65,7 @@ function caseTaken(event)
     current--;
     totalCurrent.innerHTML = current;
     list.splice(0, 1);
+    updateList();
     switch(choice)
     {
         case 1: clerkABar(petent.time, petent); break;
@@ -77,9 +78,8 @@ function updateList()
 {
     for(let i = 0; i < current; i++)
     {
-        list[i].thread.postMessage([i]);
-        console.log("UPDATE: " + current);
-        line.rows[i].cells[0] = "TEST";
+        list[i].thread.postMessage([clerks, i]);
+        line.rows[i + 1].cells[0].innerHTML = i + 1;
     }
 }
 
@@ -107,9 +107,10 @@ function newPetent(event)
 function clerkFinish(event)
 {
     var opis;
+    var result = document.getElementById("result")
     var numb = 0;
-    console.log(event.data.id);
-    switch(event.data.id)
+    var id = event.data.id;
+    switch(id)
     {
         case "A": 
         {
@@ -126,6 +127,16 @@ function clerkFinish(event)
             opis = document.getElementById("Clabel")
             numb = 2;
         } break;
+    }
+    if(event.data.res == 0)
+    {
+        result.innerHTML = "Urzędnik " + id + " rozpatrzył sprawę pomyślnie";
+        result.style.color = "#85ba3c"
+    }
+    else
+    {
+        result.innerHTML = "Urzędnik " + id + " rozpatrzył sprawę negartywnie";
+        result.style.color = "red"
     }
     opis.innerHTML = "jest wolny"; 
     clerks[numb] = true;
@@ -276,7 +287,18 @@ function stopSimulation()
     {
         document.getElementById("ssim").innerHTML = "Restart";
         generator.terminate();
+
+        for(let i = 0; i < current; i++)
+        {
+            list[i].thread.terminate();
+        }
+
+        clerkA.terminate();
+        clerkB.terminate();
+        clerkC.terminate();
+
         stoped = true;
     }
+    else beginSimulation();
 }
 

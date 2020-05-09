@@ -9,7 +9,6 @@ onmessage = function(event)
     time = (event.data[0] * 10);
     id = event.data[1];
     trigered = true;
-    console.log(id + ": recived message..");
 }
 
 function mainloop()
