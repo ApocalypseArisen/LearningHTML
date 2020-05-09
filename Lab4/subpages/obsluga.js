@@ -2,45 +2,39 @@ var totalPetents;
 var totalDeclined;
 var totalCurrent;
 var maxCurrent;
+var line;
 
 var petents = 0;
 var declined = 0;
 var current = 0;
 var limit = 10;
+
+var generator;
  
 var clerkA;
 var clerkB;
 var clerkC;
 
-class Petent
+function generator() 
 {
-    constructor(number, time, ticket)
+    var thread;
+    if(typeof(Worker) !== "undefined")
     {
-        this.number = number;
-        this.time = time;
-        this.ticekt = ticket;
+        thread = new Worker("generator.js");
+        thread.onmessage = newPetent(event);
     }
+    else failure();
 }
 
-class Clerk
+function newPetent(event)
 {
-    constructor(letter, isFree)
-    {
-        this.letter = letter;
-        this.isFree = isFree;
-    }
+    console.log("Recived: " + event.data);
 }
 
-class Generator
+function failure() 
 {
-    constructor(seed)
-    {
-        this.seed = seed;
-    }
-
-    randNextPetent() {}
-
-    randCaseTime() {}
+    document.getElementById("simulation").innerHTML = "Sorry! Your browser does not support JS Workers!"
+    console.log("Your browser does not support JS Workers");  
 }
 
 function beginSimulation()
@@ -61,5 +55,20 @@ function beginSimulation()
     totalCurrent = current;
 
     maxCurrent = document.getElementById("maximum");
-    max.innerHTML = limit;
+    maxCurrent.innerHTML = limit;
+
+    generator();
+
+    /*REFERENCE !!!!!!!DO NOT REMOVE!!!!!!!!
+    line = document.getElementById("linetable");
+    line.insertRow(0);
+    row = line.rows[0]
+    row.insertCell(0);
+    cell = row.cells[0];
+    cell.innerHTML = "TEST";*/
+}
+
+function stopSimulation() 
+{
+    
 }

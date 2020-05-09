@@ -2,7 +2,7 @@
 body {background-color: #282828;}
 
 /* Sekcja tekstu */
-#begining, #foot, #tabela, #simulation
+#begining, #foot, #simulation
 {
     color:white;
     background-color:#303030;
@@ -54,6 +54,19 @@ input
 }
 /*Koniec Wprowadzanie*/
 
+/* Tabela */
+table, td, th 
+{
+    border: 1px solid #85ba3c;
+    text-align: center;
+    border-collapse: collapse;
+}
+th, td
+{
+    padding: 5px;
+}
+/*Koniec tabela*/
+
 /*Comboboxy*/
 select
 {
@@ -86,11 +99,25 @@ select:hover
 {
     color: #85ba3c;
 }
-#max, #total
+#maximum, #total
 {
     padding-right: 140px;
 }
 /*Koniec M-symulacji*/
+
+/*Podział strony*/
+#simulation:after
+{
+    content: "";
+    display: table;
+    clear: both;
+}
+.left, .right
+{
+    float: left;
+    width: 50%;
+}
+/*Koniec podziału strony*/
 
 /*Pole symulacji*/
 #simulation

@@ -26,8 +26,6 @@
                                 <option value="20">20</option>
                                 <option value="25">25</option>
                                 <option value="30">30</option>
-                                <option value="35">35</option>
-                                <option value="40">40</option>
                             </select>
                             <br><button id="bsim" class="buttons" type="button" onclick="beginSimulation()">Rozpocznij</button>
                         </div>
@@ -44,8 +42,20 @@
                     </p>
                 </secton>
                 <section id="simulation">
-                    TODO
+                    <div class="left">
+                        <table align="center" id="linetable">
+                            <tr id="tr0">
+                                <td><b>Nr. w kolejce</b></td>
+                                <td><b>Nr. klienta</b></td>
+                                <td><b>Wylosowany czas</b></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="right">
+                        PART 2
+                    </div>
                 </section>
+                <button id="ssim" class="buttons" type="button" onclick="stopSimulation()">Stop</button>
             </article>
             <div class="space"></div>
         </div>
