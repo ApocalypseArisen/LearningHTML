@@ -11,7 +11,7 @@ function mainloop()
     if(A.length > 0)
     {
         min = 0;
-        
+
         for(let i = 0; i < A.length; i++) min = Math.abs(min + A[i]);
         iterator(A, 1, -A[0]);
         iterator(A, 1, A[0]);

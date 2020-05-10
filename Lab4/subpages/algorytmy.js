@@ -87,17 +87,21 @@ function randomTable()
     var data = document.forms["enterValues"]["size"].value;
     if(/^[0-9]+$/.test(data)) 
     {
-        if(typeof(Worker) !== "undefined")
+        if(data != 0)
         {
-            size = parseInt(data, 10) + 1;
-            document.getElementById("startButton").style.background = "red";
-            document.getElementById("error2").innerHTML = "";
-            document.getElementById("data").style.display = "none";
-            document.getElementById("presentData").style.display = "block";
+            if(typeof(Worker) !== "undefined")
+            {
+                size = parseInt(data, 10) + 1;
+                document.getElementById("startButton").style.background = "red";
+                document.getElementById("error2").innerHTML = "";
+                document.getElementById("data").style.display = "none";
+                document.getElementById("presentData").style.display = "block";
 
-            generator = new Worker("number_generator.js");
-            generator.onmessage = function(event) { addTable(event); }
+                generator = new Worker("number_generator.js");
+                generator.onmessage = function(event) { addTable(event); }
+            }
         }
+        document.getElementById("error2").innerHTML = "Rozmiar tablicy musi być większy od 0!";
     }
     else
     {
@@ -139,12 +143,16 @@ function manualTable()
     var data = document.forms["enterValues"]["size"].value;
     if(/^[0-9]+$/.test(data)) 
     {
-        size = data;
-        document.getElementById("startButton").style.background = "red";
-        document.getElementById("error2").innerHTML = "";
-        document.getElementById("data").style.display = "none";
-        document.getElementById("presentData").style.display = "block";
-        document.getElementById("manual").style.display = "block";
+        if(data != 0)
+        {
+            size = data;
+            document.getElementById("startButton").style.background = "red";
+            document.getElementById("error2").innerHTML = "";
+            document.getElementById("data").style.display = "none";
+            document.getElementById("presentData").style.display = "block";
+            document.getElementById("manual").style.display = "block";
+        }
+        document.getElementById("error2").innerHTML = "Rozmiar tablicy musi być większy od 0!";
     }
     else
     {
