@@ -148,6 +148,22 @@ select:hover
 }
 /*Koniec Przyciski*/
 
+/*HTML FORMS*/
+input
+{
+    margin-top: 4px;
+    color: white;
+    background-color: #282828;
+    border: none;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+#error
+{
+    color: red;
+}
+/*Koniec HTML FORMS*/
+
 /*Paski postępu*/
 #infoBar 
 {

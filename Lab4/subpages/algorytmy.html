@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="pl">
     <head>
+        <script type="text/javascript" src="algorytmy.js"></script>
         <meta charset="UTF-8"> 
         <link rel="stylesheet" href="design.css">
         <title>PIW Lab 4</title>
@@ -17,8 +18,16 @@
                     <h1 align="center"><big>Złożone algorytmy</big></h1>
                     <hr width="50%" style="color:#85ba3c" />
                     <p>
-                        TODO
+                        <form name="selectTask">
+                            <p id="error"></p><br>
+                            <label for="index">Dla indeksu: </label>
+                            <input type="text" name="index" value="241276">
+                            <label> zadanie do rozwiązania to: </label>
+                            <a id="taskLink" href=""></a><br>
+                            <button class="buttons" type="button" onclick="calculateTask()">Sprawdź</button>
+                        </form>
                     </p>
+
                 </secton>
             </article>
             <div class="space"></div>
