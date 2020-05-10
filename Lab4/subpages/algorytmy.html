@@ -27,8 +27,36 @@
                             <button class="buttons" type="button" onclick="calculateTask()">Sprawdź</button>
                         </form>
                     </p>
-
                 </secton>
+                <section id="data">
+                    <form name="enterValues">
+                        <p id="error2"></p><br>
+                        <label for="size">Rozmiar tablicy: </label>
+                        <input type="text" name="size" value="10"><br>
+                        <button class="buttons" type="button" onclick="randomTable()">Losuj</button><br>
+                        <button class="buttons" type="button" onclick="manualTable()">Wprowadź ręcznie</button>
+                    </form>
+                </section>
+                <section id="presentData">
+                    <table align="center" id="valueTable">
+                        <tr id="tr0">
+                            <td><b>Nr.</b></td>
+                            <td><b>Lista</b></td>
+                        </tr>
+                    </table>
+                    <button id="startButton" class="buttons" type="button" onclick="calculateMinMax()">Rozpocznij</button>
+                </section>
+                <section id="manual">
+                    <form name="enterNumber">
+                        <p id="error3"></p><br>
+                        <input type="text" name="number">
+                        <button class="buttons" type="button" onclick="addManual()">Dodaj</button><br>
+                    </form>
+                </section>
+                <section id="task">
+                    <div id="infoText"></div>
+                    <button id="resetButton" class="buttons" type="button" onclick="resetTask()">Reset</button>
+                </section>
             </article>
             <div class="space"></div>
         </div>

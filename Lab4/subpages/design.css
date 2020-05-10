@@ -2,12 +2,12 @@
 body {background-color: #282828;}
 
 /* Sekcja tekstu */
-#begining, #foot, #simulation, #infoBar
+#begining, #foot, #simulation, #infoBar, #task, #maunal, #presentData, #data
 {
     color:white;
     background-color:#303030;
 }
-#begining, #tabela, #simulation, #infoBar
+#begining, #tabela, #simulation, #infoBar, #task, #maunal, #presentData, #data
 {
     text-align: center;
 }
@@ -53,6 +53,13 @@ input
     margin-right: 10px;
 }
 /*Koniec Wprowadzanie*/
+#task, #manual, #presentData
+{
+    display: none;
+}
+/*Sekcja złożone algorytmy*/
+
+/*Koniec z-a*/
 
 /* Tabela */
 table, td, th 
@@ -158,7 +165,7 @@ input
     padding-top: 4px;
     padding-bottom: 4px;
 }
-#error
+#error, #error2, #error3
 {
     color: red;
 }
