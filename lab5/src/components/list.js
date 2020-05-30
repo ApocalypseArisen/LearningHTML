@@ -41,7 +41,7 @@ class List extends React.Component
 
     goLeft = () =>
     {
-        if((this.state.isOn - 1) > 0) this.setState(prevState => ({ isOn: prevState.isOn - 1 }))
+        if((this.state.isOn - 1) >= 0) this.setState(prevState => ({ isOn: prevState.isOn - 1 }))
     }
 
     goRight = () =>
