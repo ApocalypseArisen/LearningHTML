@@ -1,0 +1,9 @@
+#inputButton, #directonal
+{
+    color: white;
+    background-color: #85ba3c;
+    cursor: pointer;
+    border: none;
+    margin-top: 8px;
+    padding: 6px;
+}

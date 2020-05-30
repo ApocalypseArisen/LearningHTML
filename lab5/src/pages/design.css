@@ -1,0 +1,65 @@
+body {background-color: #282828;}
+
+/* Sekcja tekstu */
+.wrapper
+{
+    color:white;
+    background-color:#303030;
+    font-family: "SF Pro Display";
+    padding-top: 3px;
+    padding-bottom: 10px;
+}
+.header, .content
+{
+    text-align: center;
+}
+::selection 
+{
+    color: white;
+    background: #85ba3c;
+}
+
+#title
+{
+    font-size: 45px;
+}
+#spacer
+{
+    width: 60%;
+    color: #85ba3c;
+}
+
+a
+{
+    color: #85ba3c;
+}
+/* Koniec sekcji tekstu*/
+
+/*Przyciski i formy*/
+
+input
+{
+    margin-top: 4px;
+    color: white;
+    background-color: #282828;
+    border: none;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+/* Układ strony */
+.top
+{
+    padding-bottom: 120px;
+}
+
+footer
+{
+    background-color:#303030;
+    position: fixed;
+    height: 120px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+/* Koniec układ strony */
