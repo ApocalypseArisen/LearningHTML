@@ -1,0 +1,10 @@
+Ćwiczenie 1:
+
+    zad2:
+    w folderze zad1 uruchamiamy node src/index.js  x
+    x - parametr programu.
+
+    zad 3.2
+    W folderze zad2 uruchamiamy node src/index.js
+
+    
