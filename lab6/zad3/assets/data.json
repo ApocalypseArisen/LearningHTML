@@ -1,0 +1,25 @@
+{
+    "Plan zajęć":
+    [
+        {
+            "Programowanie Interfejsów Webowych LAB":
+            {
+               "kod": "E05-59d",
+               "termin": "Poniedziałek TP",
+               "godzina": "11:15 - 13:00",
+               "budynek": "C-16",
+               "sala": "L2.7",
+               "prowadzący": "dr inż. Tomasz Walkowiak"
+            },
+            "Programowanie Interfejsów Webowych Wykład":
+            {
+               "kod": "E05-60a",
+               "termin": "Poniedziałek TN",
+               "godzina": "13:15 - 15:00",
+               "budynek": "C-16",
+               "sala": "D1.2",
+               "prowadzący": "dr inż. Tomasz Walkowiak"
+            }
+        }
+    ]
+}

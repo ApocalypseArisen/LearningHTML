@@ -1,0 +1,190 @@
+/*Kolor tła*/
+body {background-color: #282828;}
+
+/* Sekcja tekstu */
+#begining, #task, #sidepanel, #foot, #tabela
+{
+    color:white;
+    background-color:#303030;
+}
+#begining, #task, #tabela
+{
+    text-align: center;
+}
+::selection 
+{
+    color: white;
+    background: #85ba3c;
+}
+/* Koniec sekcji tekstu*/
+
+/* Padding (Granice tekstu)*/
+#task, #begining, #tabela
+{
+    padding-top: 3px;
+    padding-bottom: 10px;
+}
+/* Koniec Padding */
+
+/* Czcionki */
+a
+{
+    color: #85ba3c;
+}
+h1
+{
+    font-size: xx-large;
+}
+footer, article, begining, li a, h1
+{
+    font-family: "SF Pro Display";
+}
+/* Konic czcionki */
+
+/*Formy*/
+input
+{
+    margin-top: 4px;
+    color: white;
+    background-color: #282828;
+    border: none;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.potwierdz
+{
+    color: white;
+    background-color: #85ba3c;
+    cursor: pointer;
+    border: none;
+    margin-top: 8px;
+    padding: 6px;
+}
+.error
+{
+    color: red;
+    display: none;
+}
+#tabela
+{
+    display: none;
+}
+/*Koniec formy*/
+
+/*Animacja*/
+#ship
+{
+  display: none;
+}
+/*Koniec Animacja*/
+
+/*Gra*/
+#starship
+{
+  display: none;
+  position: absolute;
+  cursor: pointer;
+}
+.gamespace
+{
+    height: 600px;
+    color: #85ba3c;
+}
+/*Endgame*/
+
+/*Obrazki*/
+img
+{
+    padding-left: 2px;
+    padding-right: 2px;
+}
+/*Koniec Obrazki*/
+
+/*Zwierzęta*/
+.split 
+{
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+}
+.left {left: 0;}
+.right {right: 0;}
+/*Koniec Zwierzęta*/
+
+/*lab2*/
+.math
+{
+    width: 80px;
+    text-align: center;
+}
+select
+{
+    color: white;
+    background-color: #303030;
+    cursor: pointer;
+    border: none;
+    -moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none
+}
+select:hover
+{
+    background-color: #282828;
+}
+/*Koniec lab2*/
+
+/* Tabela */
+table, td, th 
+{
+    border: 1px solid black;
+    text-align: center;
+}
+table 
+{
+    border-collapse: collapse;
+}
+
+tr:hover {background-color: #282828;}
+/* Koniec Tabeli */
+
+/* Sekcja stylu paska  */
+.menu a
+{
+    text-decoration: none;
+    padding: 12px;
+    overflow: hidden;
+    background-color: #303030;
+    color: white;
+    display: block;
+}
+.menu
+{
+    text-align: center;
+    width: 400px;
+    display: inline-block;
+}
+.menu a:hover
+{
+    background-color: #282828;
+}
+.menu a.current
+{
+    background-color: #85ba3c;
+}
+/* Koniec sekcji stylu paska */
+
+/* Układ strony */
+html, body
+{
+    height: 100%;
+}
+.wrap
+{
+    min-height: 100%;
+    margin-bottom: -60px;
+}
+.foot, .space
+{
+    height: 60px;
+}
+/* Koniec układ strony */
