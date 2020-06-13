@@ -1,0 +1,3 @@
+1. docker build -t react-webapp .  
+2. docker run -it -p 8000:80 react-webapp
+Z jakiegoś powodu na moim komputerze nie mogłem podłączyć się przez localhost, ale adres On Your Network działa poprawnie. (Oba adresy powinny się wyświetlić po wykonaniu drugiej komendy).
