@@ -63,7 +63,7 @@ function errorPage(response)
 {
   try
   {
-    let data = fs.readFileSync('./src/html/error.html');
+    let data = fs.readFileSync('src/html/error.html');
     response.writeHeader(200, {"Content-Type": "text/html"});  
     response.write(data);  
     response.end();  
@@ -79,7 +79,7 @@ function rootPage(response)
 {
   try
   {
-    let data = fs.readFileSync('./src/html/index.html');
+    let data = fs.readFileSync('src/html/index.html');
     response.writeHeader(200, {"Content-Type": "text/html"});  
     response.write(data);  
     response.end();  
@@ -87,7 +87,7 @@ function rootPage(response)
   catch (error)
   {
     console.log(error);
-    response.end("404 - Index.html nie znaleziony! Błąd plików serwera!");
+    response.end("404 - index.html nie znaleziony! Błąd plików serwera!");
   }
 }
 
@@ -95,7 +95,7 @@ function loadCss(response)
 {
   try
   {
-    let data = fs.readFileSync('./src/css/design.css');
+    let data = fs.readFileSync('src/css/design.css');
     response.writeHeader(200, {"Content-Type": "text/css"});  
     response.write(data);  
     response.end();  

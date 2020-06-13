@@ -1,10 +1,13 @@
-Ćwiczenie 1:
+zad2:
+    W w pliku dockrfile dostosywujemy parametr wejściowy funkjci
+    CMD - trzeci parametr. Wstawiamy tam liczbę którą chcemy przekazać do funkjci
+    Budujemy obraz: docker build --tag zad2:1.0 .
+    I uruchamiamy: docker run zad2:1.0
 
-    zad2:
-    w folderze zad1 uruchamiamy node src/index.js  x
-    x - parametr programu.
+zad3.2:
+    Budujemy obraz: docker build --tag zad3.2:1.0 .
+    I uruchamiamy: docker run zad3.2:1.0
 
-    zad 3.2
-    W folderze zad2 uruchamiamy node src/index.js
-
+zad4:
+    uruchamiamy komendą: docker-compose up
     
