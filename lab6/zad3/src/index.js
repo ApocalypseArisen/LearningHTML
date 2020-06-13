@@ -1,7 +1,7 @@
-const http = require('http');
+const http = require("http");
 const fs = require("fs");
 const os = require("os");
-const joke = require('one-liner-joke');
+const joke = require("one-liner-joke");
 
 const port = 8080
 
@@ -75,18 +75,54 @@ function errorPage(response)
   }
 }
 
+function rootPage(response)
+{
+  try
+  {
+    let data = fs.readFileSync('./src/html/index.html');
+    response.writeHeader(200, {"Content-Type": "text/html"});  
+    response.write(data);  
+    response.end();  
+  }
+  catch (error)
+  {
+    console.log(error);
+    response.end("404 - Index.html nie znaleziony! Błąd plików serwera!");
+  }
+}
+
+function loadCss(response)
+{
+  try
+  {
+    let data = fs.readFileSync('./src/css/design.css');
+    response.writeHeader(200, {"Content-Type": "text/css"});  
+    response.write(data);  
+    response.end();  
+  }
+  catch (error)
+  {
+    console.log(error);
+    response.end("Nie można załadować plików css");
+  }
+}
+
 const requestHandler = (request, response) => {
   console.log(request.url)
   switch(request.url)
   {
-    case "/": response.end("MAIN PAGE"); break;
+    case "/": rootPage(response); break;
     case "/ping": response.end("pong"); break;
     case "/datetime": response.end(dateTime()); break;
     case "/cpus": response.end(cpuInfo()); break;
     case "/env": response.end(serverInfo()); break;
     case "/joke": response.end(tellJoke()); break;
     case "/somedata": response.end(getData()); break;
-    default: errorPage(response);
+    default:
+    { 
+      if(request.url.indexOf(".css") != -1) loadCss(response);
+      else errorPage(response);
+    }
   }
 }
 
